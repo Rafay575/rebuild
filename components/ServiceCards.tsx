@@ -5,7 +5,7 @@ export default function ServiceCards() {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-10 md:pt-16  lg:pt-20">
       {/* Container with three columns on md+ screens, single column on mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Card 1 */}
         <div className=" border-2 flex  justify-center border-[#E4E9FF] bg-[#F3F6FD] p-6 text-center">
           {/* Icon */}

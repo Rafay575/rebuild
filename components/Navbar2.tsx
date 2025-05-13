@@ -87,7 +87,7 @@ export default function Navbar2() {
                    {/* Full-width dropdown with smooth open/close */}
               <div
                 className={
-               ` absolute left-0 w-4/5 mx-auto top-full z-10 mt-2 
+               ` absolute left-0 w-full mx-auto top-full z-10 mt-2 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `

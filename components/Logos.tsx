@@ -19,7 +19,7 @@ export default function Logos() {
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={200}
+              width={150}
               height={50}
               className="object-contain"
               priority

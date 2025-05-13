@@ -12,10 +12,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export default function HeroSection() {
   const texts = [
-    "Empowering Businesses With AI & Innovation",
-    "Unleashing Creative Solutions Innovation",
-    "Driving Growth Through Innovation & Creativity",
+    "Empowering Businesses With Al & Latest Technology",
+    "Unleashing Creative Solutions & Innovation",
+    "Driving Growth Through Modernization & Automation",
   ];
+
 
   const features = [
     "Innovation First",
@@ -70,7 +71,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[#384BFF]/70" />
 
       {/* Left Section - Content */}
-      <div className="relative w-full md:w-3/5 text-center md:text-start z-10">
+      <div className="relative w-full  xl:w-3/5 text-center md:text-start z-10">
         <AnimatePresence mode="wait">
           <motion.h1
             key={currentTextIndex}
@@ -78,7 +79,7 @@ export default function HeroSection() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="text-2xl font-bold text-white md:text-5xl !leading-normal"
+            className="text-2xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl !leading-normal"
           >
             {texts[currentTextIndex]}
           </motion.h1>
@@ -92,13 +93,13 @@ export default function HeroSection() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="grid grid-cols-1 sm:grid-cols-2 mx-auto md:mx-0 gap-6 w-fit mt-5 text-lg text-white"
+            className="grid grid-cols-2 mx-auto md:mx-0 gap-6 w-fit mt-5 text-lg text-white"
           >
             {features
               .slice(currentGridIndex * 2, currentGridIndex * 2 + 2)
               .map((feature, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="h-6 w-6 text-white" />
+                <div key={index} className="flex items-center ">
+                  <CheckCircle className="h-5 w-5 mr-1 text-white" />
                   <span className="text-sm md:text-base">{feature}</span>
                 </div>
               ))}

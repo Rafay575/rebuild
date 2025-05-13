@@ -5,46 +5,49 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
-      <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-6 lg:flex-row">
+      <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-6 xl:flex-row">
         {/* Left Side - Images */}
-        <div className="relative flex w-full max-w-lg">
+        <div className="relative flex w-full">
           {/* Main Image */}
           <div className="relative w-full overflow-hidden rounded-xl">
             <Image
               src="/images/aboutThumb1_1.png"
               alt="AI Technology"
+              layout="responsive" // This makes the image responsive
               width={500}
               height={400}
-              className="rounded-xl"
+              className="rounded-xl max-w-full h-auto" // Ensures the image is responsive
             />
           </div>
-          {/* Overlay Image */}
+
           <div className="absolute bottom-[-30px] right-[-20px]">
             <Image
               src="/images/aboutThumb1_1-sub-section.png"
               alt="Team Collaboration"
-              width={200}
-              height={150}
-              className=""
+              layout="intrinsic" // Keeps the aspect ratio while being responsive
+              width={800} // Set a larger base width for better scaling
+              height={700} // Set corresponding height for aspect ratio
+              className="w-full max-w-4xl h-auto" // Adjust the max-width to control size and make it responsive
             />
           </div>
 
-          {/* Circular Explore More Button */}
           <div
-            className="absolute -top-2 animate-spin transition-all duration-2000 -right-2 flex items-center justify-center w-20 h-20 rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
+            className="absolute -top-2 animate-spin transition-all duration-2000 -right-2 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-32 xl:h-32 rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
             style={{ animationDuration: "4s" }}
           >
             <Image
               src="/images/aboutShape2.png"
               alt="Team Collaboration"
-              fill
-              className=""
+              layout="intrinsic" // Ensures the aspect ratio is preserved while being responsive
+              width={550} // Set a larger base width for better scaling
+              height={550} // Set corresponding height for aspect ratio
+              className="w-full max-w-3xl h-auto" // Make the image responsive within the max-width limit
             />
           </div>
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-full max-w-lg text-center lg:text-left">
+        <div className="w-full  text-center md:text-left">
           <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>ABOUT COMPANY</span>

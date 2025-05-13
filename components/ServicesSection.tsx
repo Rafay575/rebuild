@@ -9,7 +9,7 @@ export default function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "Generative AI",
+      title: "AI & Machine Learning",
       imageUrl: "/images/home_services/ai-machine-learning.webp",
     },
     {
@@ -35,28 +35,28 @@ export default function ServicesSection() {
     },
     {
       id: 6,
-      title: "Cybersecurity",
-      imageUrl: "/images/mask.png",
+      title: "Cloud & DevOps Solutions",
+      imageUrl: "/images/home_services/dev-ops.webp",
     },
     {
       id: 7,
-      title: "Data Analytics",
-      imageUrl: "/images/mask.png",
+      title: "Customer Support",
+      imageUrl: "/images/home_services/f3.jpg",
     },
     {
       id: 8,
-      title: "UX/UI Design",
-      imageUrl: "/images/mask.png",
+      title: "Live Chat Support",
+      imageUrl: "/images/home_services/f1.jpg",
     },
     {
       id: 9,
       title: "UX/UI Design",
-      imageUrl: "/images/mask.png",
+      imageUrl: "/images/home_services/ui-ux-design.webp",
     },
     {
       id: 10,
-      title: "UX/UI Design",
-      imageUrl: "/images/mask.png",
+      title: "Ecommerce Development",
+      imageUrl: "/images/home_services/ecommerce-development.webp",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function ServicesSection() {
   const [showMore, setShowMore] = useState(false);
 
   // Show first 4 by default, show all if 'showMore' is true
-  const displayedServices = showMore ? services : services.slice(0, 5);
+  const displayedServices = showMore ? services : services.slice(0, 10);
 
   // Basic animation variants for each card
   const cardVariants = {
@@ -97,7 +97,7 @@ export default function ServicesSection() {
       variants={sectionVariants}
       className="max-w-7xl mx-auto px-4 py-10"
     >
-      <div className="mx-auto max-w-7xl px-6 text-start">
+      <div className="mx-auto max-w-7xl  text-start">
         {/* Title Section */}
         {/* <div className="flex items-center justify-start space-x-3">
        
@@ -115,7 +115,7 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         <AnimatePresence>
           {displayedServices.map((service) => (
             <motion.div
@@ -149,7 +149,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Button to toggle more services */}
-      <div className="mt-6 flex justify-center">
+      {/* <div className="mt-6 flex justify-center">
         <button
           onClick={() => setShowMore((prev) => !prev)}
           className="flex items-center space-x-2 text-lg font-semibold px-6 py-2 bg-[#F2F2F2] rounded-md hover:bg-[#e8e8e8] transition-colors"
@@ -162,7 +162,7 @@ export default function ServicesSection() {
             <ChevronDown size={20} />
           </motion.span>
         </button>
-      </div>
+      </div> */}
     </motion.section>
   );
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Star, ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import {  ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -101,11 +101,13 @@ export default function TestimonialsSection() {
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
        
-          breakpoints={{
-            640: { slidesPerView: 1 },
-          
-            1024: { slidesPerView: 3 },
-          }}
+         breakpoints={{
+  640: { slidesPerView: 1 },  // For small screens (sm), display 1 slide
+  768: { slidesPerView: 2 },  // For medium screens (md), display 2 slides
+  1024: { slidesPerView: 2 }, // For large screens (lg), display 2 slides
+  1440: { slidesPerView: 3 }, // For extra-large screens (xl), display 3 slides
+}}
+
           
           pagination={{ clickable: true }}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
