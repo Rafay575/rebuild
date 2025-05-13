@@ -1,0 +1,16 @@
+/* [project]/styles/nprogress.css [app-client] (css) */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #384bff;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+/*# sourceMappingURL=styles_nprogress_b52d8e.css.map*/

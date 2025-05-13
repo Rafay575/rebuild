@@ -1,0 +1,79 @@
+/* [project]/components/GlobalPreloader.module.css [app-client] (css) */
+.GlobalPreloader-module__FV2GkW__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 9999;
+}
+
+.GlobalPreloader-module__FV2GkW__loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.GlobalPreloader-module__FV2GkW__loader:before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  background: #384bff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: .5s linear infinite GlobalPreloader-module__FV2GkW__shadow324;
+}
+
+.GlobalPreloader-module__FV2GkW__loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #384bff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  animation: .5s linear infinite GlobalPreloader-module__FV2GkW__jump7456;
+}
+
+@keyframes GlobalPreloader-module__FV2GkW__jump7456 {
+  15% {
+    border-bottom-right-radius: 3px;
+  }
+
+  25% {
+    transform: translateY(9px)rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(18px)scale(1, .9)rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(9px)rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0)rotate(90deg);
+  }
+}
+
+@keyframes GlobalPreloader-module__FV2GkW__shadow324 {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+/*# sourceMappingURL=components_GlobalPreloader_module_b52d8e.css.map*/
