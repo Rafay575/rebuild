@@ -1,71 +1,77 @@
 // components/Footer.tsx
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import { ChevronsRight } from "lucide-react";
-import { MapPin, Mail, Phone, Facebook, Instagram} from 'lucide-react';
+import { MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react";
+import Link from "next/link";
 export default function Footer2() {
   return (
     <>
-    <footer className="bg-[#0D0B52] text-white">
-      {/* Top Bar */}
-     
-      <div className=" py-8">
-      <div className="mx-auto max-w-7xl px-4">
-        {/* Main container with bright background */}
-        <div className="flex flex-col items-center justify-between rounded-xl bg-[#2B4EFF] px-6 py-10 shadow-md md:flex-row">
-          
-          {/* Address */}
-          <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-            {/* Icon Circle */}
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
-              <MapPin size={20} />
-            </div>
-            {/* Text */}
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide">Address</h3>
-              <p className="text-sm">4648 Rocky Road Philadelphia PA</p>
+      <footer className="bg-[#0D0B52] text-white">
+        {/* Top Bar */}
+
+        <div className=" py-8">
+          <div className="mx-auto max-w-7xl px-4">
+            {/* Main container with bright background */}
+            <div className="flex flex-col items-center justify-between rounded-xl bg-[#2B4EFF] px-6 py-10 shadow-md md:flex-row">
+              {/* Address */}
+              <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
+                {/* Icon Circle */}
+                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
+                  <MapPin size={20} />
+                </div>
+                {/* Text */}
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wide">
+                    Address
+                  </h3>
+                  <p className="text-sm">
+                    638 Knollwood Road, Franklin Lakes NJ 07417
+                  </p>
+                </div>
+              </div>
+
+              {/* Vertical divider (visible on md+ screens) */}
+              <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
+
+              {/* SendEmail */}
+              <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
+                {/* Icon Circle */}
+                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E] border-2 md:mb-0">
+                  <Mail size={20} />
+                </div>
+                {/* Text */}
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wide">
+                    SendEmail
+                  </h3>
+                  <p className="text-sm">info@allsparktechnologies.com</p>
+                </div>
+              </div>
+
+              {/* Vertical divider (visible on md+ screens) */}
+              <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
+
+              {/* CallEmergency */}
+              <div className="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
+                {/* Icon Circle */}
+                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
+                  <Phone size={20} />
+                </div>
+                {/* Text */}
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wide">
+                    Call Now
+                  </h3>
+                  <p className="text-sm">+1 (762) 777-7275</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Vertical divider (visible on md+ screens) */}
-          <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
-
-          {/* SendEmail */}
-          <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-            {/* Icon Circle */}
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E] border-2 md:mb-0">
-              <Mail size={20} />
-            </div>
-            {/* Text */}
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide">SendEmail</h3>
-              <p className="text-sm">info@example.com</p>
-            </div>
-          </div>
-
-          {/* Vertical divider (visible on md+ screens) */}
-          <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
-
-          {/* CallEmergency */}
-          <div className="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-            {/* Icon Circle */}
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
-              <Phone size={20} />
-            </div>
-            {/* Text */}
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide">Call Now</h3>
-              <p className="text-sm">+88 0123 654 99</p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </div>
 
-
-      {/* Bottom Section */}
-     <div className="max-w-7xl pb-8 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Bottom Section */}
+        <div className="max-w-7xl pb-8 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <Image
@@ -85,7 +91,7 @@ export default function Footer2() {
                 href="#"
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
               >
-                <Facebook className="h-4 w-4"/>
+                <Facebook className="h-4 w-4" />
               </a>
               <a
                 href="#"
@@ -93,7 +99,6 @@ export default function Footer2() {
               >
                 <Instagram className="h-4 w-4" />
               </a>
-            
             </div>
           </div>
 
@@ -102,16 +107,15 @@ export default function Footer2() {
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-4 text-sm">
               {[
-                "About Us",  
-                "FAQ'S",
-                "Contact Us",
-             
-              ].map((link, index) => (
+                { name: "About Us", href: "/about" },
+                { name: "FAQ'S", href: "/#faqs" },
+                { name: "Contact Us", href: "/contact" },
+              ].map((linkItem, index) => (
                 <li key={index} className="flex items-center space-x-2">
                   <ChevronsRight className="h-4 w-4 text-white" />
-                  <a href="#" className="hover:text-white">
-                    {link}
-                  </a>
+                  <Link href={linkItem.href} className="hover:text-white">
+                    {linkItem.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -122,18 +126,38 @@ export default function Footer2() {
             <h3 className="text-lg font-semibold text-white">Our Services</h3>
             <ul className="space-y-4 text-sm">
               {[
-               
-                "Custom Software Development",
-"Web & App Development",
-"AI & Machine Learning",
-"Digital Marketing & SEO"
-
-              ].map((service, index) => (
+                {
+                  service: "Custom Software Development",
+                  icon: "/images/development-01.svg",
+                  query: "db-1",
+                },
+                {
+                  service: "Web & App Development",
+                  icon: "/images/web-app-development-01.svg",
+                  query: "db-2",
+                },
+                {
+                  service: "AI & Machine Learning",
+                  icon: "/images/ai-machine-learning-01.svg",
+                  query: "db-3",
+                },
+                {
+                  service: "Digital Marketing & SEO",
+                  icon: "/images/digital-marketing-seo-01.svg",
+                  query: "db-10",
+                },
+              ].map((serviceItem, index) => (
                 <li key={index} className="flex items-center space-x-2">
                   <ChevronsRight className="h-4 w-4 text-white" />
-                  <a href="#" className="hover:text-white">
-                    {service}
-                  </a>
+                  <Link
+                    href={{
+                      pathname: "/services",
+                      query: { service: serviceItem.query },
+                    }}
+                    className="flex items-center hover:text-white transition duration-300"
+                  >
+                    {serviceItem.service}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -152,17 +176,19 @@ export default function Footer2() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-gray-400" />
-                  <span>+208-7869-0113</span>
+                  <span>+1 (762) 777-7275</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6 text-gray-400" />
-                  <span className="text-start">638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417</span>
+                  <span className="text-start">
+                    638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-    </footer>
+      </footer>
       <div className="bg-blue-600 py-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-white text-sm">
           <p>
@@ -179,6 +205,5 @@ export default function Footer2() {
         </div>
       </div>
     </>
-
   );
 }

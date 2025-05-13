@@ -1,10 +1,11 @@
 "use client";
 
+import React, { Suspense, useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import styles from "./GlobalPreloader.module.css";
 
-export default function GlobalPreloader() {
+// GlobalPreloader component
+const GlobalPreloaderWithSuspense = () => {
   const [loading, setLoading] = useState(true);
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -33,4 +34,16 @@ export default function GlobalPreloader() {
       {/* You can add custom text, brand logo, or animations here */}
     </div>
   );
-}
+};
+
+// Wrapper component that wraps GlobalPreloader inside Suspense
+const GlobalPreloader = () => (
+  <Suspense fallback={<> <div className={styles.overlay}>
+      <div className={styles.loader} />
+      {/* You can add custom text, brand logo, or animations here */}
+    </div></>}>
+    <GlobalPreloaderWithSuspense />
+  </Suspense>
+);
+
+export default GlobalPreloader;

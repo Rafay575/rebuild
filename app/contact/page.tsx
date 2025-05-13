@@ -3,7 +3,6 @@ import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import HeroSection from "@/components/HeroSection";
 import Footer2 from "@/components/Footer2";
-import BottomFooter from "@/components/BottomFooter";
 import  Contact  from "@/components/Contact";
 const contactpage = () => {
   return (
@@ -12,7 +11,7 @@ const contactpage = () => {
       <Navbar2 />
       <HeroSection
         title="Contact Us"
-        backgroundImage="/images/breadcrumb.png"
+        backgroundImage="/images/breadcrum.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" },

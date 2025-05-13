@@ -84,20 +84,20 @@ const  Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/"
-              className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-[#384BFF] hover:text-white"
+              className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-[#384BFF] hover:text-white"
+              className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
             >
               About Us
             </Link>
 
             {/* Services Mega Menu */}
             <div className=" group">
-              <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-[#384BFF] hover:text-white">
+              <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white">
                 Services
                 <ChevronDown className="ml-1 h-4 w-4 " />
               </button>
@@ -321,7 +321,7 @@ const  Navbar = () => {
 
             <Link
               href="/contact"
-              className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-[#384BFF] hover:text-white"
+              className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
             >
               Contact Us
             </Link>

@@ -1,5 +1,5 @@
 // ServiceAccordionGroup.tsx
-
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronRight } from "lucide-react";
 

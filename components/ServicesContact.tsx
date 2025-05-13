@@ -7,12 +7,12 @@ const ServicesContact = () => {
       <div className="max-w-7xl mx-auto text-center md:px-4">
         {/* Intro Text */}
         <p className="text-lg md:text-xl text-white mb-6">
-          Let's create the solution that drives your business forward!
+          Let&apos;s create the solution that drives your business forward!
         </p>
 
         {/* Main Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 mb-12">
-          Get in touch today and let’s discuss your project!
+          Get in touch today and let&apos;s discuss your project!
         </h2>
 
         {/* Button */}

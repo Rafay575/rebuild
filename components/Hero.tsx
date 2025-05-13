@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+
 import { CheckCircle } from "lucide-react";
-import SkeletonImage from "./SkeletonImage";
+
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Link from "next/link";
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export default function HeroSection() {
@@ -55,7 +54,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative col-span-12 overflow-hidden mt-[-20px] max-w-[97%] mx-auto rounded-[50px] h-[90vh] p-8 md:p-16 flex flex-col md:flex-row items-center justify-center md:justify-between"
-      style={{ zIndex: -1 }}
+      style={{ zIndex: 1 }}
     >
       {/* Video Background */}
       <video
@@ -71,7 +70,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[#384BFF]/70" />
 
       {/* Left Section - Content */}
-      <div className="relative w-full  xl:w-3/5 text-center md:text-start z-10">
+      <div className="relative w-full  xl:w-3/5 text-center md:text-start z-10" style={{zIndex: 100}}>
         <AnimatePresence mode="wait">
           <motion.h1
             key={currentTextIndex}
@@ -116,19 +115,18 @@ export default function HeroSection() {
             exit="exit"
             className="mt-12 flex justify-center md:justify-start"
           >
-            <Button
-              className={`${plusJakartaSans.className} bg-[#F98600] rounded-full px-10 !py-6 text-white hover:bg-yellow-500`}
+            <Link
+              href={"/contact"}
+              className={`${plusJakartaSans.className}  bg-[#F98600] rounded-full px-10 !py-3 text-white hover:bg-yellow-500`}
+              
             >
               Get in touch
-            </Button>
+            </Link>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Right Section - Image (if needed) */}
-      <div className="hidden md:block w-2/5 relative">
-        {/* Image or other content */}
-      </div>
+   
     </section>
   );
 }

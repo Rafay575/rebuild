@@ -11,7 +11,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function FaqSection() {
   return (
-    <section className="pb-16 overflow-x-hidden">
+    <section className="pb-16 overflow-x-hidden" id="faqs">
       <div className="mx-auto max-w-6xl px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Side - Images */}
         <div className="relative w-full ">

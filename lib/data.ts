@@ -1,7 +1,7 @@
 export const contentData10 = {
     hero: {
       title: "Digital Marketing & SEO",
-      backgroundImage: "/images/digital-marketing-banner.png",
+      backgroundImage: "/images/service/5.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -125,7 +125,7 @@ export const contentData10 = {
   export const contentData9 = {
     hero: {
       title: "Live Chat Support",
-      backgroundImage: "/images/live-chat-support-banner.png",
+      backgroundImage: "/images/service/8.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -249,7 +249,7 @@ export const contentData10 = {
   export const contentData8 = {
     hero: {
       title: "Email Marketing",
-      backgroundImage: "/images/email-marketing-banner.png",
+      backgroundImage: "/images/service/7.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -373,7 +373,7 @@ export const contentData10 = {
   export const contentData7 = {
     hero: {
       title: "Customer Support",
-      backgroundImage: "/images/customer-support-banner.png",
+      backgroundImage: "/images/service/2.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -497,7 +497,7 @@ export const contentData10 = {
   export const contentData6 = {
     hero: {
       title: "Ecommerce Development",
-      backgroundImage: "/images/ecommercedevbanner.png",
+      backgroundImage: "/images/service/6.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -625,7 +625,7 @@ export const contentData10 = {
   export const contentData5 = {
     hero: {
       title: "UI/UX Design",
-      backgroundImage: "/images/uiuxdesignbanner.png",
+      backgroundImage: "/images/service/9.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -749,7 +749,7 @@ export const contentData10 = {
   export const contentData4 = {
     hero: {
       title: "Cloud & DevOps Solutions",
-      backgroundImage: "/images/cloud-devops-banner.png",
+      backgroundImage: "/images/service/4.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -873,7 +873,7 @@ export const contentData10 = {
   export const contentData3 = {
     hero: {
       title: "AI & Machine Learning",
-      backgroundImage: "/images/ai-ml-banner.png",
+      backgroundImage: "/images/service/3.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -996,8 +996,8 @@ export const contentData10 = {
   };
  export const contentData2 = {
      hero: {
-      title: "AI & Machine Learning",
-      backgroundImage: "/images/ai-ml-banner.png",
+      title: "Web App Development",
+      backgroundImage: "/images/service/10.png",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -1127,8 +1127,8 @@ export const contentData10 = {
 };
 export const contentData1 = {
   hero: {
-      title: "AI & Machine Learning",
-      backgroundImage: "/images/ai-ml-banner.png",
+      title: "Custom Software Development",
+      backgroundImage: "/images/service/3.WEBP",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }

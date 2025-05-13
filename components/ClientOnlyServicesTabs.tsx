@@ -1,5 +1,4 @@
-// ClientOnlyServicesTabs.tsx
-"use client"; // Ensure this component only runs on the client side
+"use client"; 
 
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic"; // Dynamic import for ServicesTabs

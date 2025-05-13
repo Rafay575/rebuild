@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/styles/nprogress.css"],"sourcesContent":["/* styles/nprogress.css */\r\n#nprogress {\r\n    pointer-events: none;\r\n  }\r\n  \r\n  #nprogress .bar {\r\n    background: #384BFF;\r\n    position: fixed;\r\n    z-index: 9999;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 3px;\r\n  }\r\n  "],"names":[],"mappings":"AACA;;;;AAIE"}},
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

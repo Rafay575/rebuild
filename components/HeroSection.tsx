@@ -1,6 +1,6 @@
 // components/HeroSection.tsx
+"use client";
 import React from 'react';
-import Link from 'next/link';
 
 interface BreadcrumbItem {
   label: string;
@@ -23,13 +23,13 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   backgroundImage,
-  breadcrumbs = [],
+
   overlayColor = 'bg-blue-900/50', // Semi-transparent overlay by default
   heightClass = 'h-96', // Default height
 }) => {
   return (
     <section className={`relative w-full ${heightClass} bg-cover bg-center`} 
-      style={{ backgroundImage: `url('images/breadcrum.png')` }}
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
     >
       {/* Overlay */}
       <div className={`absolute inset-0 ${overlayColor}`} />
@@ -39,29 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <h1 className="mb-4 text-3xl font-bold md:text-5xl">{title}</h1>
 
         {/* Breadcrumbs */}
-        {breadcrumbs.length > 0 && (
-          <nav aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-2 text-sm md:text-base">
-              {breadcrumbs.map((crumb, index) => {
-                const isLast = index === breadcrumbs.length - 1;
-                return (
-                  <li key={crumb.label} className="inline-flex items-center">
-                    {!isLast ? (
-                      <>
-                        <Link href={crumb.href}>
-                          {crumb.label}
-                        </Link>
-                        <span className="mx-1">/</span>
-                      </>
-                    ) : (
-                      <span>{crumb.label}</span>
-                    )}
-                  </li>
-                );
-              })}
-            </ol>
-          </nav>
-        )}
+       
       </div>
     </section>
   );

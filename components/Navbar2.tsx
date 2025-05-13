@@ -64,7 +64,7 @@ export default function Navbar2() {
             <li>
               <Link
                 href="/"
-                className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-blue-600 hover:text-white"
+                className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 Home
               </Link>
@@ -72,13 +72,13 @@ export default function Navbar2() {
             <li>
               <Link
                 href="/about"
-                className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-blue-600 hover:text-white"
+                className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 About Us
               </Link>
             </li>
            <div className=" group">
-              <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-[#384BFF] hover:text-white">
+              <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white">
                 Services
                 <ChevronDown className="ml-1 h-4 w-4 " />
               </button>
@@ -87,7 +87,7 @@ export default function Navbar2() {
                    {/* Full-width dropdown with smooth open/close */}
               <div
                 className={
-               ` absolute left-0 w-full mx-auto top-full z-10 mt-2 
+               ` absolute left-48 w-[80%] mx-auto top-full z-10 mt-2 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
                 transition-transform duration-300 ease-out `
@@ -304,7 +304,7 @@ export default function Navbar2() {
             <li>
               <Link
                 href="/contact"
-                className="text-gray-700 px-4 py-2 transition duration-500 rounded-lg font-semibold hover:bg-blue-600 hover:text-white"
+                className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
                 Contact
               </Link>

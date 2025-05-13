@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import PhoneField from "./PhoneField";
@@ -6,9 +7,7 @@ import Dropdown from "./Dropdown";
 import { motion } from "framer-motion"; // Import Framer Motion
 
 export default function Contact() {
-  const handleSelect = (value: string) => {
-    console.log("Selected:", value);
-  };
+
 
   return (
     <>
@@ -32,9 +31,9 @@ export default function Contact() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-blue-600 relative overflow-hidden group-hover:bg-blue-600 transition-all">
-                  <Phone className="text-blue-600 group-hover:text-white transition-all" size={22} />
-                  <div className="absolute right-0 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-all w-0" />
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <Phone className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Call Us</h3>
@@ -48,9 +47,9 @@ export default function Contact() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-blue-600 relative overflow-hidden group-hover:bg-blue-600 transition-all">
-                  <Mail className="text-blue-600 group-hover:text-white transition-all" size={22} />
-                  <div className="absolute right-0 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-all w-0" />
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <Mail className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Get a Quote</h3>
@@ -64,13 +63,13 @@ export default function Contact() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-blue-600 relative overflow-hidden group-hover:bg-blue-600 transition-all">
-                  <MapPin className="text-blue-600 group-hover:text-white transition-all" size={22} />
-                  <div className="absolute right-0 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-all w-0" />
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <MapPin className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-sm">638 Knollwood Road Franklin Lakes NJ 07417.</p>
+                  <p className="text-sm">638 Knollwood Road, Franklin Lakes NJ 07417</p>
                 </div>
               </motion.div>
             </div>
@@ -100,7 +99,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="info@example.com"
+                    placeholder="info@allsparktechnologies.com"
                     className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
                 </div>
@@ -112,7 +111,18 @@ export default function Contact() {
                   <PhoneField label="Your Phone*" name="phone" placeholder="+1 234 567 890" />
                 </div>
                 <div className="md:col-span-1">
-                  <Dropdown label="Choose a fruit" items={["Apple", "Banana", "Cherry", "Date", "Elderberry"]} />
+                  <Dropdown label="Choose a service" items={["Customer Support"
+,"Digital Marketing & SEO"
+,"Custom Software Development"
+,"Web & App Development"
+,"AI & Machine Learning"
+,"Cloud & DevOps Solutions"
+,"UI/UX Design"
+,"Ecommerce Development"
+,"Email Marketing"
+,"Live Chat Support"]} />
+                  
+
                 </div>
                 <div className="col-span-2">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700">
@@ -131,7 +141,7 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="rounded-full bg-blue-600 px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="rounded-full bg-[#384BFF] px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#384BFF] focus:ring-offset-2"
               >
                 Send Message
               </button>

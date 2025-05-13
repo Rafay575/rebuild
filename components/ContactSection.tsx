@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {  useRouter } from "next/navigation";
 
 export default function ContactSection() {
+  const router = useRouter();
   return (
     <section className="relative pt-16 mb-[-100px]">
       <div className="mx-auto max-w-7xl px-6">
@@ -37,6 +41,7 @@ export default function ContactSection() {
             <Button
             
               className="rounded-full bg-[#F98600] hover:bg-opacity-80 text-white  px-10 py-6"
+              onClick={() => {router.push('/contact')}}
             >
               TALK TO A SPECIALIST →
             </Button>

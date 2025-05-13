@@ -1,9 +1,7 @@
 "use client";
 
 import GlobalPreloader from "@/components/GlobalPreloader";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useRef } from "react";
-import type { Metadata } from "next";
+
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google"; // Import the font
 // import NProgress from "nprogress";
@@ -21,9 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const firstRender = useRef(true);
+
 
   return (
     <html lang="en">

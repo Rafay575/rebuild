@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
+// Define the types for StatItem and WhyChooseSectionProps
 export interface StatItem {
   id: number;
   label: string;
@@ -17,15 +20,17 @@ export interface WhyChooseSectionProps {
   whyChoose: WhyChooseConfig;
 }
 
-// Dynamically import CountUp to avoid SSR issues
-const CountUpComponent: any = dynamic(() => import("react-countup"), {
-  ssr: false,
-});
+// Dynamically import the CountUp component with the correct types
+const CountUpComponent = dynamic(
+  () => import("react-countup").then((mod) => mod.default),
+  { ssr: false }
+);
 
 const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ whyChoose }) => {
   const { title, stats } = whyChoose;
   const [mounted, setMounted] = useState(false);
 
+  // Set mounted to true after the component is mounted on the client-side
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -33,10 +38,10 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ whyChoose }) => {
   return (
     <section className="pb-16">
       <div className="max-w-7xl mx-auto px-4">
-       <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center text-gray-800 mb-12">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center text-gray-800 mb-12">
           {title}
         </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2  xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat) => (
             <div
               key={stat.id}
@@ -52,15 +57,15 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ whyChoose }) => {
                     enableScrollSpy={true}
                     scrollSpyOnce={true}
                   >
-                    {({ countUpRef }: any) => <span ref={countUpRef} />}
+                    {({ countUpRef }: { countUpRef: React.RefObject<HTMLSpanElement> }) => (
+                      <span ref={countUpRef} />
+                    )}
                   </CountUpComponent>
                 ) : (
                   <span>0{stat.suffix}</span>
                 )}
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {stat.label}
-              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">{stat.label}</p>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Mail, Phone, MapPin ,Facebook ,Instagram} from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import { ChevronsRight } from "lucide-react";
+import Link from "next/link";
 export default function Footer() {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Footer() {
                 href="#"
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
               >
-                <Facebook className="h-4 w-4"/>
+                <Facebook className="h-4 w-4" />
               </a>
               <a
                 href="#"
@@ -33,25 +34,23 @@ export default function Footer() {
               >
                 <Instagram className="h-4 w-4" />
               </a>
-            
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-            <ul className="space-y-4 text-sm">
+             <ul className="space-y-4 text-sm">
               {[
-                "About Us",  
-                "FAQ'S",
-                "Contact Us",
-             
-              ].map((link, index) => (
+                { name: "About Us", href: "/about" },
+                { name: "FAQ'S", href: "/#faqs" },
+                { name: "Contact Us", href: "/contact" },
+              ].map((linkItem, index) => (
                 <li key={index} className="flex items-center space-x-2">
                   <ChevronsRight className="h-4 w-4 text-white" />
-                  <a href="#" className="hover:text-white">
-                    {link}
-                  </a>
+                  <Link href={linkItem.href} className="hover:text-white">
+                    {linkItem.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -60,23 +59,29 @@ export default function Footer() {
           {/* Our Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Our Services</h3>
-            <ul className="space-y-4 text-sm">
-              {[
-               
-                "Custom Software Development",
-"Web & App Development",
-"AI & Machine Learning",
-"Digital Marketing & SEO"
+           <ul className="space-y-4 text-sm">
+  {[
+    { service: "Custom Software Development", icon: "/images/development-01.svg", query: "db-1" },
+    { service: "Web & App Development", icon: "/images/web-app-development-01.svg", query: "db-2" },
+    { service: "AI & Machine Learning", icon: "/images/ai-machine-learning-01.svg", query: "db-3" },
+    { service: "Digital Marketing & SEO", icon: "/images/digital-marketing-seo-01.svg", query: "db-10" },
+  ].map((serviceItem, index) => (
+    <li key={index} className="flex items-center space-x-2">
+      <ChevronsRight className="h-4 w-4 text-white" />
+      <Link
+        href={{
+          pathname: "/services",
+          query: { service: serviceItem.query },
+        }}
+        className="flex items-center hover:text-white transition duration-300"
+      >
+        
+        {serviceItem.service}
+      </Link>
+    </li>
+  ))}
+</ul>
 
-              ].map((service, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <ChevronsRight className="h-4 w-4 text-white" />
-                  <a href="#" className="hover:text-white">
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact Us */}
@@ -92,11 +97,13 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-gray-400" />
-                  <span>+208-7869-0113</span>
+                  <span>+1 (762) 777-7275</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6 text-gray-400" />
-                  <span className="text-start">638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417</span>
+                  <span className="text-start">
+                    638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417
+                  </span>
                 </li>
               </ul>
             </div>

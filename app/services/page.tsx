@@ -3,7 +3,6 @@ import React from "react";
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import Footer2 from "@/components/Footer2";
-import BottomFooter from "@/components/BottomFooter";
 import ClientOnlyServicesTabs from "@/components/ClientOnlyServicesTabs"; // Import the client-only wrapper
 
 const Services = () => {

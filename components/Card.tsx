@@ -2,10 +2,7 @@
 import React from "react";
 
 // Individual card data shape
-type CardDataItem = {
-  title: string;
-  content: string;
-};
+
 
 // Props for the Card component
 type CardProps = {

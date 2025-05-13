@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import Topnav from "@/components/Topnav";
 import Navbar2 from "@/components/Navbar2";
 import HeroSection from "@/components/HeroSection";
 import Footer2 from "@/components/Footer2";
-import BottomFooter from "@/components/BottomFooter";
 import ServiceCards from "@/components/ServiceCards";
-import AboutPageComponent from "@/components/AboutPageComponent";
+import AboutPageComponent from "@/components/AboutPageComponent";  // Ensure this component is CSR-safe
 import CoreValuesSemiCircle from "@/components/CoreValuesSemiCircle";
 
 
@@ -18,19 +17,21 @@ const about = () => {
       <Navbar2 />
       <HeroSection
         title="About Us"
-        backgroundImage="/images/breadcrumb.png"
+        backgroundImage="/images/breadcrum.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/About" },
         ]}
       />
-     
-     <ServiceCards />
-     <AboutPageComponent />
-     <CoreValuesSemiCircle />
-    
+      <ServiceCards />
+      
+      {/* Wrap AboutPageComponent in Suspense if it uses async hooks */}
+      <Suspense fallback={<div>Loading About Page...</div>}>
+        <AboutPageComponent />
+      </Suspense>
+
+      <CoreValuesSemiCircle />
       <Footer2 />
-      {/* <BottomFooter /> */}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 "use client"; // Required for Next.js App Router
 
-import Image from "next/image";
 import { PlayCircle } from "lucide-react"; // Lucide icons
 
 export default function ProcessSection() {

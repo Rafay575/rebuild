@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useSearchParams, usePathname } from "next/navigation"; // Correct import for App Directory
+import { useSearchParams } from "next/navigation"; // Correct import for App Directory
 import HeroSection from "@/components/HeroSection";
 import Card from "./Card";
 import ServiceAccordion from "./ServiceAccordion";
@@ -19,7 +19,6 @@ export default function ServicesTabs() {
   const [isClient, setIsClient] = useState(false); // State to track if it is client-side
 
   const searchParams = useSearchParams(); // Access query params using `useSearchParams`
-  const pathname = usePathname(); // Access pathname if needed
 
   useEffect(() => {
     setMounted(true); 
@@ -53,7 +52,7 @@ export default function ServicesTabs() {
     <div>
       <HeroSection
         title={contentData.hero.title}
-        backgroundImage={contentData.hero.backgroundImage || "/images/breadcrum"}
+        backgroundImage={contentData.hero.backgroundImage }
         breadcrumbs={[
           {
             label: contentData.hero.breadcrumbs[0].label,
