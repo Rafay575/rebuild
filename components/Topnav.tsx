@@ -1,6 +1,7 @@
 // components/TopBar.tsx
 import React from 'react';
-import { Facebook,  Linkedin } from 'lucide-react';
+import { Facebook,  Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Topnav() {
   return (
@@ -14,15 +15,24 @@ export default function Topnav() {
       </div>
 
       {/* Right side */}
-      <div className="flex items-center space-x-2">
+      <div className=" items-center hidden md:flex space-x-2">
         <span  className='text-[12px]'>Follow us:</span>
-        <a href="#" className="hover:text-gray-300">
-          <Facebook size={12} />
-        </a>
-     
-        <a href="#" className="hover:text-gray-300">
-          <Linkedin size={12} />
-        </a>
+         <Link
+  href="https://www.facebook.com/allsparktechnologies.official/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className=""
+>
+  <Facebook className="h-3 w-3" />
+</Link>
+<Link
+  href="https://www.instagram.com/allsparktechnologies/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className=""
+>
+  <Instagram className="h-3 w-3" />
+</Link>
       </div>
      </div>
 

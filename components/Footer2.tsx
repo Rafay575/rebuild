@@ -87,18 +87,22 @@ export default function Footer2() {
             </p>
             {/* Social Media Icons */}
             <div className="flex space-x-3 mt-4">
-              <a
-                href="#"
-                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
+                        <Link
+  href="https://www.facebook.com/allsparktechnologies.official/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+>
+  <Facebook className="h-4 w-4" />
+</Link>
+<Link
+  href="https://www.instagram.com/allsparktechnologies/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-2 bg-white/10 rounded-lg hover:bg-white/20"
+>
+  <Instagram className="h-4 w-4" />
+</Link>
             </div>
           </div>
 
@@ -172,7 +176,7 @@ export default function Footer2() {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-gray-400" />
-                  <span>info@allsparktech.com</span>
+                  <span>info@allsparktechnologies.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-gray-400" />

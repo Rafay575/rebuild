@@ -996,7 +996,7 @@ export const contentData10 = {
   };
  export const contentData2 = {
      hero: {
-      title: "Web App Development",
+      title: "Web & App Development",
       backgroundImage: "/images/service/10.png",
       breadcrumbs: [
         { label: "Home", href: "/" },
@@ -1128,7 +1128,7 @@ export const contentData10 = {
 export const contentData1 = {
   hero: {
       title: "Custom Software Development",
-      backgroundImage: "/images/service/3.WEBP",
+      backgroundImage: "/images/service/3.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }

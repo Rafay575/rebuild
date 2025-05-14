@@ -19,9 +19,9 @@ export default function Navbar2() {
   // Scroll event to toggle sticky navbar
   const handleScroll = () => {
     if (window.scrollY > 0) {
-      setIsSticky(true);  // Sticky navbar when scroll position > 0
+      setIsSticky(true); // Sticky navbar when scroll position > 0
     } else {
-      setIsSticky(false);  // Non-sticky navbar when scroll position = 0
+      setIsSticky(false); // Non-sticky navbar when scroll position = 0
     }
   };
 
@@ -37,8 +37,12 @@ export default function Navbar2() {
   return (
     <>
       <nav
-        className={`${plusJakartaSans.className} bg-white relative flex items-center shadow-md transition-all duration-300 ${
-          isSticky ? "sticky top-0 left-0 w-full z-50 shadow-lg" : " w-full z-50 shadow-lg sticky"
+        className={`${
+          plusJakartaSans.className
+        } bg-white relative flex items-center shadow-md transition-all duration-300 ${
+          isSticky
+            ? "sticky top-0 left-0 w-full z-50 shadow-lg"
+            : " w-full z-50 shadow-lg sticky"
         }`}
         style={{ zIndex: 100 }}
       >
@@ -60,7 +64,7 @@ export default function Navbar2() {
           </div>
 
           {/* Middle: Nav links (Desktop) */}
-          <ul className="hidden space-x-4 items-center font-medium text-gray-700 md:flex">
+          <ul className="hidden space-x-4 items-center font-medium text-gray-700 lg:flex">
             <li>
               <Link
                 href="/"
@@ -77,21 +81,19 @@ export default function Navbar2() {
                 About Us
               </Link>
             </li>
-           <div className=" group">
+            <div className=" group">
               <button className="flex items-center text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white">
                 Services
                 <ChevronDown className="ml-1 h-4 w-4 " />
               </button>
 
               {/* Full-width dropdown with smooth open/close */}
-                   {/* Full-width dropdown with smooth open/close */}
+              {/* Full-width dropdown with smooth open/close */}
               <div
-                className={
-               ` absolute left-48 w-[80%] mx-auto top-full z-10 mt-2 
+                className={` absolute left-48 w-[80%] mx-auto top-full z-10 mt-2 
                  transform-gpu origin-top 
                 scale-y-0 group-hover:scale-y-100 
-                transition-transform duration-300 ease-out `
-              }
+                transition-transform duration-300 ease-out `}
               >
                 <div className="bg-white shadow-lg py-6 pb-20 rounded-xl px-20">
                   <div className="mx-auto max-w-6xl px-6 grid grid-cols-3 gap-8">
@@ -101,7 +103,7 @@ export default function Navbar2() {
                         Software Development & AI
                       </h3>
                       <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
-                      <Link
+                        <Link
                           href={{
                             pathname: "/services",
                             query: { service: "db-1" },
@@ -149,64 +151,61 @@ export default function Navbar2() {
                           />
                           AI & Machine Learning
                         </Link>
-                       
-                        <Link
-                            href={{
-                              pathname: "/services",
-                              query: { service: "db-4" },
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 "
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/devops-icon.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />{" "}
-                            Cloud & DevOps Solutions
-                          </Link>
-                        <Link
-                            href={{
-                              pathname: "/services",
-                              query: { service: "db-5" },
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300 "
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/social-media-marekting-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />{" "}
-                           UI/UX Design
-                          </Link>
 
-                          <Link
-                            href={{
-                              pathname: "/services",
-                              query: { service: "db-6" },
-                            }}
-                            className="flex items-center hover:text-[#384BFF] transition duration-300"
-                          >
-                            <Image
-                              className="mr-2"
-                              src={"/images/ecommerce-development-icon-01.svg"}
-                              alt="icon"
-                              width={30}
-                              height={30}
-                            />{" "}
-                            Ecommerce Development
-                          </Link>
-                       
-                        
-                       
+                        <Link
+                          href={{
+                            pathname: "/services",
+                            query: { service: "db-4" },
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/devops-icon.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />{" "}
+                          Cloud & DevOps Solutions
+                        </Link>
+                        <Link
+                          href={{
+                            pathname: "/services",
+                            query: { service: "db-5" },
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300 "
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/social-media-marekting-01.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />{" "}
+                          UI/UX Design
+                        </Link>
+
+                        <Link
+                          href={{
+                            pathname: "/services",
+                            query: { service: "db-6" },
+                          }}
+                          className="flex items-center hover:text-[#384BFF] transition duration-300"
+                        >
+                          <Image
+                            className="mr-2"
+                            src={"/images/ecommerce-development-icon-01.svg"}
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />{" "}
+                          Ecommerce Development
+                        </Link>
                       </ul>
                     </div>
                     <div>
                       <h3 className="mb-3 text-base font-bold text-gray-800">
-                      BPO & Tech-Enabled Services
+                        BPO & Tech-Enabled Services
                       </h3>
                       <ul className="space-y-4 pl-2 mt-5 text-sm text-gray-700">
                         <li>
@@ -242,7 +241,7 @@ export default function Navbar2() {
                               width={30}
                               height={30}
                             />
-                           Email Marketing
+                            Email Marketing
                           </Link>
                         </li>
                         <li>
@@ -291,15 +290,12 @@ export default function Navbar2() {
                             Digital Marketing & SEO
                           </Link>
                         </li>
-                       
                       </ul>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
 
             <li>
               <Link
@@ -314,7 +310,7 @@ export default function Navbar2() {
           {/* Hamburger Button (Mobile) */}
           <button
             onClick={() => setIsSidebarOpen(true)}
-            className="md:hidden text-gray-700"
+            className="lg:hidden text-gray-700"
             aria-label="Open Menu"
           >
             <svg
@@ -334,7 +330,7 @@ export default function Navbar2() {
         </div>
 
         {/* Right: Get a Quote button (Desktop Only) */}
-        <div className="hidden md:block group relative min-w-[15%] bg-[#384BFF] py-3 transition-transform duration-300 ease-out hover:scale-105 hover:bg-[#253AC7]">
+        <div className="hidden lg:block group relative min-w-[15%] bg-[#384BFF] py-3 transition-transform duration-300 ease-out hover:scale-105 hover:bg-[#253AC7]">
           <Link href="/contact">
             <div className="px-4 pl-14 py-2 font-medium text-white transition-colors duration-300">
               Get a Quote &rarr;
@@ -347,21 +343,32 @@ export default function Navbar2() {
         {isSidebarOpen && (
           <motion.div
             key="sidebar"
-            initial={{ x: "100%" }}
+            initial={{ x: "66%" }}
             animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            exit={{ x: "66%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex justify-end"
+            className="fixed inset-0 z-50 flex"
             style={{ zIndex: 1000 }}
           >
-            {/* Sidebar Panel */}
-            <div className="bg-white w-full z-20 p-4 pt-0 shadow-md flex flex-col">
+            {/* Left half: black overlay */}
+            <div
+              className="w-1/3 bg-black bg-opacity-90"
+              onClick={() => setIsSidebarOpen(false)}
+            />
+
+            {/* Right half: white sidebar */}
+            <div className="bg-white w-2/3 z-20 p-4 pt-0 shadow-md flex flex-col relative">
               {/* Close Button */}
               <button
                 onClick={() => setIsSidebarOpen(false)}
-                className="mb-4 absolute top-10 right-10 self-end"
+                className="mb-4 absolute top-2 right-2 self-end"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -370,23 +377,32 @@ export default function Navbar2() {
                   />
                 </svg>
               </button>
-
-              {/* Nav Links */}
-              <nav className="flex flex-col items-center justify-center h-full">
-                <ul className="space-y-12 text-gray-900">
-                  <li>
+              <div className="mt-5 mx-auto text-center">
+                <Link href="/">
+                  <Image
+                    src="/images/logo.svg"
+                    alt="All Spark Logo"
+                    width={150}
+                    height={150}
+                  />
+                </Link>
+              </div>
+                <hr className="mt-3 "/>
+              <nav className="flex flex-col mx-5 mt-10 h-full">
+                <ul className="space-y-2 text-gray-900">
+                  <li className="border-b pb-3">
                     <Link href="/" onClick={() => setIsSidebarOpen(false)}>
                       Home
                     </Link>
                   </li>
-                  <li>
+                  <li className="border-b pb-3">
                     <Link href="/about" onClick={() => setIsSidebarOpen(false)}>
                       About Us
                     </Link>
                   </li>
 
                   {/* Services with smooth dropdown */}
-                  <li>
+                  <li className="border-b pb-3">
                     <button
                       className="flex items-center text-gray-700 font-semibold"
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -409,27 +425,144 @@ export default function Navbar2() {
                     </button>
 
                     <AnimatePresence>
-                      {isServicesOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden mt-2 pl-4 text-sm text-gray-700"
-                        >
-                          {/* Services content goes here */}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden pl-2 text-xs text-gray-700"
+                      >
+                     
+                        <div className="mt-2">
+                         
+                          <ul className="space-y-2">
+                            <li >
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-1" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                                
+                                Custom Software Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-2" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                               
+                                Web &amp; App Development
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-3" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                                
+                                AI &amp; Machine Learning
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-4" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                               
+                                Cloud &amp; DevOps Solutions
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-5" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                               
+                                UI/UX Design
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-6" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                               
+                                Ecommerce Development
+                              </Link>
+                            </li>
+                       
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-7" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                               
+                                Customer Support
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-8" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                                
+                                Email Marketing
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-9" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                                
+                                Live Chat Support
+                              </Link>
+                            </li>
+                          
+                            <li>
+                              <Link
+                                href={{ pathname: "/services", query: { service: "db-10" } }}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex items-center hover:text-blue-600 transition duration-300"
+                              >
+                                
+                                Digital Marketing &amp; SEO
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                   </li>
 
-                  <li>
-                    <Link href="/contact" onClick={() => setIsSidebarOpen(false)}>
+                  <li className="border-b pb-3">
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsSidebarOpen(false)}
+                    >
                       Contact Us
                     </Link>
                   </li>
                 </ul>
               </nav>
+              <div className="mb-4 text-xs border-t w-[90%] absolute bottom-2  ">
+                  <div className="max-w-[75%] mx-auto mt-3 text-center">
+
+                  © All Copyright {new Date().getFullYear()} by AllSpark
+                  Technologies
+                  </div>
+                </div>
             </div>
 
             {/* Overlay to close the sidebar when clicking outside */}

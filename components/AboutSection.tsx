@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
-      <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-6 xl:flex-row">
+      <div className="mx-auto max-w-6xl flex flex-col-reverse justify-between gap-10 px-6 xl:flex-row">
         {/* Left Side - Images */}
-        <div className="relative flex w-full">
+        <div className="relative flex w-full  xl:w-[45%]">
           {/* Main Image */}
           <div className="relative w-full overflow-hidden rounded-xl">
             <Image
@@ -24,14 +24,14 @@ export default function AboutSection() {
               src="/images/aboutThumb1_1-sub-section.png"
               alt="Team Collaboration"
               layout="intrinsic" // Keeps the aspect ratio while being responsive
-              width={800} // Set a larger base width for better scaling
-              height={700} // Set corresponding height for aspect ratio
-              className="w-full max-w-4xl h-auto" // Adjust the max-width to control size and make it responsive
+              width={400} // Set a larger base width for better scaling
+              height={300} // Set corresponding height for aspect ratio
+              className="w-full max-w-xl h-auto" // Adjust the max-width to control size and make it responsive
             />
           </div>
 
           <div
-            className="absolute -top-2 animate-spin transition-all duration-2000 -right-2 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-32 xl:h-32 rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
+            className="absolute  animate-spin transition-all duration-2000  -top-2 -right-2 lg:top-0 lg:right-0 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-24 xl:h-24 rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
             style={{ animationDuration: "4s" }}
           >
             <Image
@@ -46,20 +46,20 @@ export default function AboutSection() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-full  text-center md:text-left">
-          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
+        <div className="w-full xl:w-[45%] text-center md:text-left">
+          <div className="mb-2 flex items-center justify-center md:justify-start space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>ABOUT COMPANY</span>
             <ArrowRight className="h-4 w-4" />
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl font-bold !leading-normal sm:text-4xl lg:text-5xl">
+          <h1 className="text-2xl font-bold !leading-normal sm:text-3xl lg:text-4xl">
             Innovating the Future with AI & Technology
           </h1>
 
           {/* Description */}
-          <p className="mt-4 text-base text-white/80">
+          <p className="mt-5 text-base text-white/80">
             At All Spark Technologies, we believe in the power of technology to
             transform ideas into reality. Established in the heart of the USA,
             our software house is a hub of innovation, creativity, and
@@ -67,7 +67,7 @@ export default function AboutSection() {
             possibilities.
           </p>
 
-          <p className="mt-4 text-base text-white/80">
+          <p className="mt-5 text-base text-white/80">
             Driven by passion and expertise, our team of skilled developers,
             engineers, and AI specialists work collaboratively to create
             intelligent, user-centric solutions that shape the future of
@@ -75,7 +75,7 @@ export default function AboutSection() {
           </p>
 
           {/* Service Badges */}
-          <div className="mt-6 flex flex-wrap justify-center gap-4 lg:justify-start">
+          <div className="mt-16 flex flex-wrap justify-center gap-4 lg:justify-start">
             <div className="flex items-center text-sm space-x-2 rounded-lg bg-white/10 px-2 pr-4 py-2 text-white">
               <div className="relative h-full w-10 flex justify-center items-center rounded-md bg-white ">
                 <Image

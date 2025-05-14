@@ -23,6 +23,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+       <link
+        rel="icon"
+        href="/images/favicon.png"
+        type="image/png"
+      />
       <body className={`${plusJakartaSans.className} antialiased`}>
         <GlobalPreloader />
         {children}

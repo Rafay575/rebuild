@@ -14,7 +14,7 @@ export default function FaqSection() {
     <section className="pb-16 overflow-x-hidden" id="faqs">
       <div className="mx-auto max-w-6xl px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Side - Images */}
-        <div className="relative w-full ">
+        <div className="relative w-full py-1">
           {/* Main Image */}
           <div className="overflow-hidden rounded-3xl">
             <Image
@@ -40,7 +40,7 @@ export default function FaqSection() {
           </div>
 
           <div
-            className="absolute -top-2 animate-spin transition-all duration-2000 -right-2 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-24 lg:h-24  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
+            className="absolute  animate-spin transition-all duration-2000 top-0 -right-1 lg:right-0 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-24 lg:h-24  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
             style={{ animationDuration: "4s" }}
           >
             <Image

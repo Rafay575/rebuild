@@ -7,8 +7,6 @@ import Dropdown from "./Dropdown";
 import { motion } from "framer-motion"; // Import Framer Motion
 
 export default function Contact() {
-
-
   return (
     <>
       <motion.section
@@ -22,7 +20,9 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Left Column */}
           <div>
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">Ready to Get Started</h2>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+              Ready to Get Started
+            </h2>
 
             <div className="py-12 pb-20 space-y-6">
               {/* Call Us */}
@@ -32,7 +32,10 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <Phone className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <Phone
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
@@ -48,7 +51,10 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <Mail className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <Mail
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
@@ -64,12 +70,17 @@ export default function Contact() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <MapPin className="text-[#384BFF] group-hover:text-white transition-all" size={22} />
+                  <MapPin
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
                   <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-sm">638 Knollwood Road, Franklin Lakes NJ 07417</p>
+                  <p className="text-sm">
+                    638 Knollwood Road, Franklin Lakes NJ 07417
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -80,7 +91,10 @@ export default function Contact() {
             <form className="space-y-4">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Your Name*
                   </label>
                   <input
@@ -92,7 +106,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Your Email*
                   </label>
                   <input
@@ -106,26 +123,37 @@ export default function Contact() {
               </div>
 
               {/* Row 2: Phone, Message */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="md:col-span-1">
-                  <PhoneField label="Your Phone*" name="phone" placeholder="+1 234 567 890" />
-                </div>
-                <div className="md:col-span-1">
-                  <Dropdown label="Choose a service" items={["Customer Support"
-,"Digital Marketing & SEO"
-,"Custom Software Development"
-,"Web & App Development"
-,"AI & Machine Learning"
-,"Cloud & DevOps Solutions"
-,"UI/UX Design"
-,"Ecommerce Development"
-,"Email Marketing"
-,"Live Chat Support"]} />
-                  
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
 
+                <div className="col-span-1 ">
+                  <PhoneField
+                    label="Your Phone*"
+                    name="phone"
+                    placeholder="+1 234 567 890"
+                  />
                 </div>
-                <div className="col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                <div className="col-span-1 ">
+                  <Dropdown
+                    label="Choose a service"
+                    items={[
+                      "Customer Support",
+                      "Digital Marketing & SEO",
+                      "Custom Software Development",
+                      "Web & App Development",
+                      "AI & Machine Learning",
+                      "Cloud & DevOps Solutions",
+                      "UI/UX Design",
+                      "Ecommerce Development",
+                      "Email Marketing",
+                      "Live Chat Support",
+                    ]}
+                  />
+                </div>
+                <div className="col-span-1 md:col-span-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Describe your project
                   </label>
                   <textarea
