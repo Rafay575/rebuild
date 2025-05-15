@@ -11,51 +11,64 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function FaqSection() {
   return (
-    <section className="pb-16 overflow-x-hidden" id="faqs">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* Left Side - Images */}
-        <div className="relative w-full py-1">
-          {/* Main Image */}
-          <div className="overflow-hidden rounded-3xl">
-            <Image
-              src="/images/aboutThumb1_1-2.png"
+     <section className="py-16" id="faq-section">
+      <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+        {/* Left Image Section */}
+        <div className="relative w-full max-w-md">
+          <div className="relative overflow-hidden rounded-3xl w-full h-auto">
+            <img
               alt="Team Working"
-              layout="responsive" // Makes the image responsive
-              width={400} // Set the base width
-              height={400} // Set the corresponding height
-              className="max-w-full h-auto" 
+              loading="lazy"
+              decoding="async"
+              data-nimg="fill"
+              className="object-cover"
+              src="/images/aboutThumb1_1-2.png"
+              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+            />
+            <img
+              alt="Team Working"
+              loading="lazy"
+              width={400}
+              height={400}
+              decoding="async"
+              data-nimg="1"
+              className="rounded-3xl"
+              src="/images/aboutThumb1_1-2.png"
+              style={{ color: "transparent", width: "100%", height: "auto" }}
             />
           </div>
-
-          {/* Overlay Image */}
-          <div className="absolute bottom-[-50px] right-[-30px]">
-            <Image
-              src="/images/aboutThumb1_1-sub-section-2.png"
-              alt="Team Discussion"
-              layout="intrinsic" // Keeps the aspect ratio while being responsive
-              width={200} // Set the base width
-              height={150} // Set the corresponding height
-              className="max-w-full h-auto" 
-            />
-          </div>
-
           <div
-            className="absolute  animate-spin transition-all duration-2000 top-0 -right-1 lg:right-0 flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-24 lg:h-24  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide"
+            className="absolute bottom-[-30px] right-[-30px] w-0 h-0 sm:bottom-[-35px] sm:right-[-40px] sm:w-[250px] sm:h-[225px]"
+          >
+            <img
+              alt="Team Discussion"
+              loading="lazy"
+              decoding="async"
+              data-nimg="fill"
+              className="object-contain"
+              src="/images/aboutThumb1_1-sub-section-2.png"
+              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+            />
+          </div>
+          <div
+             className="absolute top-0 right-0 w-[5em] h-[5em] md:right-[-10px] md:w-16 md:h-16  lg:right-[-10px] lg:w-20 lg:h-20  flex items-center  xl:w-20 xl:h-20  xl:right-[0px]
+            justify-center  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide  animate-spin"
             style={{ animationDuration: "4s" }}
           >
-            <Image
+            <img
+              alt="Explore More"
+              loading="lazy"
+              decoding="async"
+              data-nimg="fill"
+              className="object-contain"
               src="/images/projectShape1.png"
-              alt="Team Collaboration"
-              layout="intrinsic" // Ensures the aspect ratio is preserved while being responsive
-              width={550} // Set the base width
-              height={550} // Set the corresponding height
-              className="w-full max-w-3xl h-auto" // Make the image responsive within the max-width limit
+              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
             />
           </div>
         </div>
 
-        {/* Right Side - FAQ */}
-        <div className="w-full ">
+       
+         <div className="w-full max-w-lg">
           {/* FAQ Label */}
           <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-[#1D4ED8]">
             <ArrowLeft className="h-4 w-4" />
