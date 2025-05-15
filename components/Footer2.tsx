@@ -53,7 +53,7 @@ export default function Footer2() {
         {/* Text */}
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wide">
-            SendEmail
+            Send Email
           </h3>
           <p className="text-sm">info@allsparktechnologies.com</p>
         </div>
