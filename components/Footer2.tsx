@@ -10,65 +10,79 @@ export default function Footer2() {
       <footer className="bg-[#0D0B52] text-white">
         {/* Top Bar */}
 
-        <div className=" py-8">
-          <div className="mx-auto max-w-7xl px-4">
-            {/* Main container with bright background */}
-            <div className="flex flex-col items-center justify-between rounded-xl bg-[#2B4EFF] px-6 py-10 shadow-md md:flex-row">
-              {/* Address */}
-              <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-                {/* Icon Circle */}
-                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
-                  <MapPin size={20} />
-                </div>
-                {/* Text */}
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide">
-                    Address
-                  </h3>
-                  <p className="text-sm">
-                    638 Knollwood Road, Franklin Lakes NJ 07417
-                  </p>
-                </div>
-              </div>
-
-              {/* Vertical divider (visible on md+ screens) */}
-              <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
-
-              {/* SendEmail */}
-              <div className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-                {/* Icon Circle */}
-                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E] border-2 md:mb-0">
-                  <Mail size={20} />
-                </div>
-                {/* Text */}
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide">
-                    SendEmail
-                  </h3>
-                  <p className="text-sm">info@allsparktechnologies.com</p>
-                </div>
-              </div>
-
-              {/* Vertical divider (visible on md+ screens) */}
-              <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
-
-              {/* CallEmergency */}
-              <div className="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left">
-                {/* Icon Circle */}
-                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
-                  <Phone size={20} />
-                </div>
-                {/* Text */}
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide">
-                    Call Now
-                  </h3>
-                  <p className="text-sm">+1 (762) 777-7275</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="py-8">
+  <div className="mx-auto max-w-7xl px-4">
+    {/* Main container with bright background */}
+    <div className="flex flex-col items-center justify-between rounded-xl bg-[#2B4EFF] px-6 py-10 shadow-md md:flex-row">
+      {/* Address */}
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=638+Knollwood+Road,+Franklin+Lakes+NJ+07417"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left"
+        aria-label="Open Address in Google Maps"
+      >
+        {/* Icon Circle */}
+        <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
+          <MapPin size={20} />
         </div>
+        {/* Text */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide">
+            Address
+          </h3>
+          <p className="text-sm">
+            638 Knollwood Road, Franklin Lakes NJ 07417
+          </p>
+        </div>
+      </a>
+
+      {/* Vertical divider (visible on md+ screens) */}
+      <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
+
+      {/* SendEmail */}
+      <a
+        href="mailto:info@allsparktechnologies.com"
+        className="mb-6 flex w-full flex-col items-center text-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left"
+        aria-label="Send email to info@allsparktechnologies.com"
+      >
+        {/* Icon Circle */}
+        <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E] border-2 md:mb-0">
+          <Mail size={20} />
+        </div>
+        {/* Text */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide">
+            SendEmail
+          </h3>
+          <p className="text-sm">info@allsparktechnologies.com</p>
+        </div>
+      </a>
+
+      {/* Vertical divider (visible on md+ screens) */}
+      <div className="hidden h-16 w-px bg-gray-300 opacity-25 md:block" />
+
+      {/* CallEmergency */}
+      <a
+        href="tel:+17627777275"
+        className="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left"
+        aria-label="Call +1 (762) 777-7275"
+      >
+        {/* Icon Circle */}
+        <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
+          <Phone size={20} />
+        </div>
+        {/* Text */}
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide">
+            Call Now
+          </h3>
+          <p className="text-sm">+1 (762) 777-7275</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 
         {/* Bottom Section */}
         <div className="max-w-7xl pb-8 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -185,7 +199,7 @@ export default function Footer2() {
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6 text-gray-400" />
                   <span className="text-start">
-                    638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417
+                    638 KNOLLWOOD ROAD, FRANKLIN LAKES, NJ, 07417
                   </span>
                 </li>
               </ul>

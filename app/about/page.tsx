@@ -17,7 +17,7 @@ const about = () => {
       <Navbar2 />
       <HeroSection
         title="About Us"
-        backgroundImage="/images/breadcrum.png"
+        backgroundImage="/images/breadcrum.webp"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us", href: "/About" },

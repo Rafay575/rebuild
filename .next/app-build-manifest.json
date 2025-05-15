@@ -23,16 +23,12 @@
       "static/chunks/_e69f0d._.js",
       "static/chunks/_d95469._.js"
     ],
-    "/about/page": [
+    "/_not-found/page": [
       "static/chunks/_22d2ba._.js",
       "static/chunks/app_favicon_ico_mjs_53e3fe._.js",
       "static/chunks/[root of the server]__8d4ef7._.js",
       "static/chunks/[root of the server]__50bb15._.css",
       "static/chunks/app_layout_tsx_61af54._.js",
-      "static/chunks/[root of the server]__ce244e._.js",
-      "static/chunks/node_modules_86a4f6._.js",
-      "static/chunks/[next]_internal_font_google_plus_jakarta_sans_ccad94fd_module_60b0be.css",
-      "static/chunks/app_about_page_tsx_77e069._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
       "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
       "static/chunks/node_modules_next_dist_client_523921._.js",
@@ -42,12 +38,17 @@
       "static/chunks/_e69f0d._.js",
       "static/chunks/_d95469._.js"
     ],
-    "/_not-found/page": [
+    "/services/page": [
       "static/chunks/_22d2ba._.js",
       "static/chunks/app_favicon_ico_mjs_53e3fe._.js",
       "static/chunks/[root of the server]__8d4ef7._.js",
       "static/chunks/[root of the server]__50bb15._.css",
       "static/chunks/app_layout_tsx_61af54._.js",
+      "static/chunks/[root of the server]__3a24bc._.js",
+      "static/chunks/node_modules_b818b7._.js",
+      "static/chunks/[next]_internal_font_google_plus_jakarta_sans_ccad94fd_module_60b0be.css",
+      "static/chunks/components_ServicesTabs_tsx_1ce3ef._.js",
+      "static/chunks/app_services_page_tsx_77e069._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
       "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
       "static/chunks/node_modules_next_dist_client_523921._.js",
@@ -76,17 +77,16 @@
       "static/chunks/_e69f0d._.js",
       "static/chunks/_d95469._.js"
     ],
-    "/services/page": [
+    "/about/page": [
       "static/chunks/_22d2ba._.js",
       "static/chunks/app_favicon_ico_mjs_53e3fe._.js",
       "static/chunks/[root of the server]__8d4ef7._.js",
       "static/chunks/[root of the server]__50bb15._.css",
       "static/chunks/app_layout_tsx_61af54._.js",
-      "static/chunks/[root of the server]__3a24bc._.js",
-      "static/chunks/node_modules_b818b7._.js",
+      "static/chunks/[root of the server]__ce244e._.js",
+      "static/chunks/node_modules_1aa163._.js",
       "static/chunks/[next]_internal_font_google_plus_jakarta_sans_ccad94fd_module_60b0be.css",
-      "static/chunks/components_ServicesTabs_tsx_1ce3ef._.js",
-      "static/chunks/app_services_page_tsx_77e069._.js",
+      "static/chunks/app_about_page_tsx_77e069._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
       "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
       "static/chunks/node_modules_next_dist_client_523921._.js",

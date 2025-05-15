@@ -64,7 +64,7 @@ export default function ServicesTabs() {
           },
         ]}
       />
-      <div className="w-full container mx-auto px-4 md:px-5 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="w-full container max-w-7xl mx-auto px-4 md:px-5 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* First Section: On Load Transition */}
 
         {/* Other Sections: Transition On View */}

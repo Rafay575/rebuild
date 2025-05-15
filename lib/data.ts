@@ -873,7 +873,7 @@ export const contentData10 = {
   export const contentData3 = {
     hero: {
       title: "AI & Machine Learning",
-      backgroundImage: "/images/service/3.webp",
+      backgroundImage: "/images/service/1.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }
@@ -997,7 +997,7 @@ export const contentData10 = {
  export const contentData2 = {
      hero: {
       title: "Web & App Development",
-      backgroundImage: "/images/service/10.png",
+      backgroundImage: "/images/service/10.webp",
       breadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Services", href: "/" }

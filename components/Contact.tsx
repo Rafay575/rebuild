@@ -24,66 +24,72 @@ export default function Contact() {
               Ready to Get Started
             </h2>
 
-            <div className="py-12 pb-20 space-y-6">
-              {/* Call Us */}
-              <motion.div
-                className="flex items-center relative group transition-all"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <Phone
-                    className="text-[#384BFF] group-hover:text-white transition-all"
-                    size={22}
-                  />
-                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Call Us</h3>
-                  <p className="text-sm">+1 (762) 777-7275</p>
-                </div>
-              </motion.div>
+          <div className="py-12 pb-20 space-y-6">
+  {/* Call Us */}
+  <motion.a
+    href="tel:+17627777275"
+    className="flex items-center relative group transition-all"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+  >
+    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+      <Phone
+        className="text-[#384BFF] group-hover:text-white transition-all"
+        size={22}
+      />
+      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+    </div>
+    <div>
+      <h3 className="text-lg font-semibold">Call Us</h3>
+      <p className="text-sm">+1 (762) 777-7275</p>
+    </div>
+  </motion.a>
 
-              {/* Get a Quote */}
-              <motion.div
-                className="flex items-center relative group transition-all"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <Mail
-                    className="text-[#384BFF] group-hover:text-white transition-all"
-                    size={22}
-                  />
-                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Get a Quote</h3>
-                  <p className="text-sm">info@allsparktechnologies.com</p>
-                </div>
-              </motion.div>
+  {/* Get a Quote */}
+  <motion.a
+    href="mailto:info@allsparktechnologies.com"
+    className="flex items-center relative group transition-all"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+  >
+    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+      <Mail
+        className="text-[#384BFF] group-hover:text-white transition-all"
+        size={22}
+      />
+      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+    </div>
+    <div>
+      <h3 className="text-lg font-semibold">Get a Quote</h3>
+      <p className="text-sm">info@allsparktechnologies.com</p>
+    </div>
+  </motion.a>
 
-              {/* Location */}
-              <motion.div
-                className="flex items-center relative group transition-all"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-                  <MapPin
-                    className="text-[#384BFF] group-hover:text-white transition-all"
-                    size={22}
-                  />
-                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-sm">
-                    638 Knollwood Road, Franklin Lakes NJ 07417
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+  {/* Location */}
+  <motion.a
+    href="https://www.google.com/maps/search/?api=1&query=638+Knollwood+Road,+Franklin+Lakes+NJ+07417"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center relative group transition-all"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+  >
+    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+      <MapPin
+        className="text-[#384BFF] group-hover:text-white transition-all"
+        size={22}
+      />
+      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+    </div>
+    <div>
+      <h3 className="text-lg font-semibold">Location</h3>
+      <p className="text-sm">
+        638 Knollwood Road, Franklin Lakes NJ 07417
+      </p>
+    </div>
+  </motion.a>
+</div>
+
           </div>
 
           {/* Right Column: Contact Form */}

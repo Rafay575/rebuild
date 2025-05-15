@@ -107,7 +107,7 @@ export default function Footer() {
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6 text-gray-400" />
                   <span className="text-start">
-                    638 KNOLLWOOD ROAD FRANKLIN LAKES, NJ, 07417
+                    638 KNOLLWOOD ROAD, FRANKLIN LAKES, NJ, 07417
                   </span>
                 </li>
               </ul>
