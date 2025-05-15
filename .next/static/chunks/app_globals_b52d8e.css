@@ -822,6 +822,10 @@ body {
   height: 0;
 }
 
+.h-\[4em\] {
+  height: 4em;
+}
+
 .w-0 {
   width: 0;
 }
@@ -956,6 +960,10 @@ body {
 
 .w-\[5em\] {
   width: 5em;
+}
+
+.w-\[4em\] {
+  width: 4em;
 }
 
 .min-w-\[15\%\] {
