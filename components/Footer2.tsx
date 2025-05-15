@@ -110,7 +110,7 @@ export default function Footer2() {
   <Facebook className="h-4 w-4" />
 </Link>
 <Link
-  href="https://www.instagram.com/allsparktechnologies/"
+  href="https://www.instagram.com/allspark_technologies?igsh=aXkzbDMwc2Jvc3g4"
   target="_blank"
   rel="noopener noreferrer"
   className="p-2 bg-white/10 rounded-lg hover:bg-white/20"

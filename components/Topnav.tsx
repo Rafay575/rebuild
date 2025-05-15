@@ -26,7 +26,7 @@ export default function Topnav() {
   <Facebook className="h-3 w-3" />
 </Link>
 <Link
-  href="https://www.instagram.com/allsparktechnologies/"
+  href="https://www.instagram.com/allspark_technologies?igsh=aXkzbDMwc2Jvc3g4"
   target="_blank"
   rel="noopener noreferrer"
   className=""
