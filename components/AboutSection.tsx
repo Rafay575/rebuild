@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
         <div className="relative flex w-full mx-auto max-w-lg">
           <div className="relative w-full overflow-hidden rounded-xl">
-            <img
+            <Image
               alt="AI Technology"
               loading="lazy"
               decoding="async"
@@ -15,7 +15,7 @@ export default function AboutSection() {
               src="/images/aboutThumb1_1.png"
               style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
             />
-            <img
+            <Image
               alt="AI Technology"
               loading="lazy"
               width={500}
@@ -30,7 +30,7 @@ export default function AboutSection() {
           <div
             className="absolute bottom-[-30px] right-[-30px] w-[175px] h-[150px] sm:bottom-[-35px] sm:right-[-40px] sm:w-[250px] sm:h-[225px]"
           >
-            <img
+            <Image
               alt="Team Collaboration"
               loading="lazy"
               decoding="async"

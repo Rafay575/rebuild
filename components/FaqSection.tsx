@@ -16,7 +16,7 @@ export default function FaqSection() {
         {/* Left Image Section */}
         <div className="relative w-full max-w-md">
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
-            <img
+            <Image
               alt="Team Working"
               loading="lazy"
               decoding="async"
@@ -25,7 +25,7 @@ export default function FaqSection() {
               src="/images/aboutThumb1_1-2.png"
               style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
             />
-            <img
+            <Image
               alt="Team Working"
               loading="lazy"
               width={400}
@@ -40,7 +40,7 @@ export default function FaqSection() {
           <div
             className="absolute bottom-[-30px] right-[-30px] w-0 h-0 sm:bottom-[-35px] sm:right-[-40px] sm:w-[250px] sm:h-[225px]"
           >
-            <img
+            <Image
               alt="Team Discussion"
               loading="lazy"
               decoding="async"
@@ -55,7 +55,7 @@ export default function FaqSection() {
             justify-center  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide  animate-spin"
             style={{ animationDuration: "4s" }}
           >
-            <img
+            <Image
               alt="Explore More"
               loading="lazy"
               decoding="async"
