@@ -32,25 +32,25 @@ export default function ProcessSection() {
                 number: "1",
                 title: "Planning & Strategy",
                 description:
-                  "We start by understanding business requirements, defining objectives, and creating a roadmap for the software. This phase includes market research, competitor analysis, and selecting the right tech stack.",
+                  "We start by understanding business requirements, defining objectives, and creating a roadmap. This phase includes market research, competitor analysis, and choosing the right tech stack for custom software development.",
               },
               {
                 number: "2",
                 title: "Design & Development",
                 description:
-                  "Our team crafts intuitive UI/UX designs and builds robust, scalable software solutions. Using agile methodologies, we ensure rapid iteration, seamless integrations, and AI-powered automation where applicable.",
+                  "Our team designs intuitive UI/UX and builds scalable software using full-stack software development practices. We follow agile methods, ensure seamless integration, and apply AI development for smarter automation.",
               },
               {
                 number: "3",
                 title: "Testing & Quality Assurance",
                 description:
-                  "We conduct thorough testing, including functionality, performance, security, and user experience testing. Automated and manual QA ensures that the software meets the highest industry standards before deployment.",
+                  "We perform comprehensive QA—including functionality, performance, security, and user testing. Our mix of automated/manual testing ensures compliance with top software development standards.",
               },
               {
                 number: "4",
                 title: "Optimization & Support",
                 description:
-                  "Once the software is deployed, we provide continuous monitoring, maintenance, and performance optimization. We also offer updates, security patches, and feature enhancements for long-term success.",
+                  "After deployment, we provide ongoing monitoring, updates, and feature enhancements. Our software development agency USA also ensures post-launch support for long-term product success.",
               },
             ].map((step, index) => (
               <div key={index} className="text-start">
@@ -58,7 +58,7 @@ export default function ProcessSection() {
                   {step.number}
                 </h2>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-xs !leading-normal text-gray-300 text-justify">
+                <p className="mt-2 text-xs text-gray-300 leading-[20px] [word-spacing:0.15em]">
                   {step.description}
                 </p>
               </div>

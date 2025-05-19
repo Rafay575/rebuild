@@ -11,7 +11,7 @@ export default function Topnav() {
       <div className="hidden md:flex  items-center space-x-2">
         <span className='text-[12px]'>info@allsparktechnologies.com</span>
         <span className='text-[12px]'>|</span>
-        <span className='text-[12px]'>+1 (762) 777-7275</span>
+        <span className='text-[12px]'>+1(616)308-1863</span>
       </div>
 
       {/* Right side */}

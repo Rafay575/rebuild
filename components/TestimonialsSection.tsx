@@ -14,13 +14,16 @@ export default function TestimonialsSection() {
   const [active, setActive] = useState(0); // ← tracks the centred slide
 
   /* ---------- dummy data ---------- */
+
+
+  
   const testimonials = [
     {
       id: 1,
       name: "Jonathan Carter",
       role: "Startup Founder",
       text:
-        "All Spark transformed our business with its Al- powered solutions. Their team built a scalable and efficient system that automated our entire workflow. Highly recommend!",
+        "AllSpark transformed our business with its AI-powered solutions. Their team built a scalable, efficient system that automated our operations. Highly recommend!",
       image: "/images/testimonials/avatar.png",
       rating: 5,
     },
@@ -29,7 +32,7 @@ export default function TestimonialsSection() {
       name: "David Thompson",
       role: "CTO, FinTech Company",
       text:
-        "All Spark's cloud-based solutions helped us migrate to a secure and high-performance environment. Their technical expertise and support team are top- notch!",
+        "Their cloud-based software development helped us migrate to a high-performance, secure setup. Exceptional technical expertise!",
       image: "/images/testimonials/avatar.png",
       rating: 5,
     },
@@ -38,7 +41,7 @@ export default function TestimonialsSection() {
       name: "Emily Roberts",
       role: "AI Researcher",
       text:
-        "The Al-driven automation tools All Spark developed for us have saved our team hours of manual work. Their deep understanding of machine learning is truly impressive!",
+        "The AI automation tools AllSpark delivered saved our team countless hours. Their machine learning knowledge is unmatched.",
       image: "/images/testimonials/avatar-2.png",
       rating: 5,
     },
@@ -47,7 +50,7 @@ export default function TestimonialsSection() {
       name: "Michael Lee",
       role: "SaaS Product Manager",
       text:
-        "Our collaboration with All Spark was seamless. They provided innovative solutions that improved our app's performance and security. A great tech partner!",
+        "Seamless collaboration with AllSpark. Their innovative development improved our app’s performance and security.",
       image: "/images/testimonials/avatar.png",
       rating: 5,
     },
@@ -56,7 +59,7 @@ export default function TestimonialsSection() {
       name: "Rachel Green ",
       role: "Healthcare IT Specialist",
       text:
-        "All Spark developed a secure and compliant telehealth platform for our company. Their ability to handle complex integrations was beyond our expectations!",
+        "AllSpark developed a secure telehealth platform with complex integrations. Their enterprise software development firm experience really stood out.",
       image: "/images/testimonials/avatar-2.png",
       rating: 5,
     },
@@ -65,7 +68,7 @@ export default function TestimonialsSection() {
       name: "James Wilson",
       role: "Logistics Operations Manager",
       text:
-        "The custom ERP system All Spark built has improved our supply chain efficiency. Their team was very responsive and delivered the project ahead of schedule!",
+        "The custom ERP they built streamlined our supply chain. Fast delivery and excellent responsiveness from a skilled software development agency.",
       image: "/images/testimonials/avatar.png",
       rating: 5,
     },
@@ -74,7 +77,7 @@ export default function TestimonialsSection() {
       name: "Natalie Cooper",
       role: "Digital Marketing Consultant",
       text:
-        "The automation features All Spark provided have boosted our ad campaigns' efficiency. Their support and willingness to innovate made a huge difference.",
+        "Their automation features supercharged our ad campaigns. Truly a tech-enabled software development company worth partnering with.",
       image: "/images/testimonials/avatar-2.png",
       rating: 5,
     },

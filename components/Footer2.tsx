@@ -66,7 +66,7 @@ export default function Footer2() {
       <a
         href="tel:+17627777275"
         className="flex w-full flex-col items-center text-center md:w-auto md:flex-row md:items-center md:space-x-3 md:text-left"
-        aria-label="Call +1 (762) 777-7275"
+        aria-label="Call +1(616)308-1863"
       >
         {/* Icon Circle */}
         <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#191B4E] border-dotted border-[#191B4E]  border-2 md:mb-0">
@@ -77,7 +77,7 @@ export default function Footer2() {
           <h3 className="text-sm font-semibold uppercase tracking-wide">
             Call Now
           </h3>
-          <p className="text-sm">+1 (762) 777-7275</p>
+          <p className="text-sm">+1(616)308-1863</p>
         </div>
       </a>
     </div>
@@ -194,7 +194,7 @@ export default function Footer2() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-gray-400" />
-                  <span>+1 (762) 777-7275</span>
+                  <span>+1(616)308-1863</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6 text-gray-400" />

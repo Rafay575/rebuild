@@ -3,62 +3,53 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-   <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
+    <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
-        <div className="relative flex w-full mx-auto max-w-lg">
-          <div className="relative w-full overflow-hidden rounded-xl">
+      
+<div className="relative w-full max-w-md">
+          {/* ───────── main photo ───────── */}
+          <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
-              alt="AI Technology"
-              loading="lazy"
-              decoding="async"
-              className="rounded-xl object-cover"
               src="/images/aboutThumb1_1.png"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <Image
-              alt="AI Technology"
-              loading="lazy"
-              width={500}
+              alt="Team Working"
+              width={400}
               height={400}
-              decoding="async"
-              className="rounded-xl"
-              src="/images/aboutThumb1_1.png"
-              style={{ color: "transparent", width: "100%", height: "auto" }}
+              className="rounded-3xl w-full h-auto"
             />
           </div>
 
-          <div
-            className="absolute bottom-[-30px] right-[-30px] w-[175px] h-[150px] sm:bottom-[-35px] sm:right-[-40px] sm:w-[250px] sm:h-[225px]"
-          >
+          {/* ───────── bottom-right overlay ───────── */}
+          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[200px] h-[200px]">
             <Image
-              alt="Team Collaboration"
-              loading="lazy"
-              decoding="async"
-              className="object-contain"
               src="/images/aboutThumb1_1-sub-section.png"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+              alt="Team Discussion"
+              fill
+              sizes="100px"
+              className="object-contain"
             />
           </div>
 
+          {/* ───────── spinning shape ───────── */}
           <div
-            className="absolute top-0 right-0 w-[5em] h-[5em] md:right-[-10px] md:w-24 md:h-24  lg:right-[-10px] lg:w-20 lg:h-20  flex items-center  xl:w-24 xl:h-24  xl:right-[0px]
-            justify-center  rounded-full border-2 border-white text-white text-xs uppercase tracking-wide  animate-spin"
+            className="absolute top-0 right-0 w-[5em] h-[5em] md:right-[-10px] md:w-16 md:h-16
+               lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-20 xl:h-20 flex
+               items-center justify-center rounded-full border-2 border-white
+               text-white text-xs uppercase tracking-wide animate-spin"
             style={{ animationDuration: "4s" }}
           >
-            <img
-              alt="Team Collaboration"
-              loading="lazy"
-              decoding="async"
-              className="object-contain"
+            <Image
               src="/images/aboutShape2.png"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+              alt="Explore More"
+              fill
+              sizes="80px"
+              className="object-contain"
             />
           </div>
         </div>
 
+
         <div className="w-full max-w-lg mx-auto lg:text-left">
-          
-  <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
+          <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
             <span>ABOUT COMPANY</span>
             <ArrowRight className="h-4 w-4" />
@@ -69,12 +60,19 @@ export default function AboutSection() {
 
           <p className="mt-4 text-base text-white/80">
             <span className="mb-5 block">
-              At All Spark Technologies, we believe in the power of technology to transform ideas into reality. Established in the heart of the USA, our software house is a hub of innovation, creativity, and cutting-edge solutions designed to push boundaries and redefine possibilities.
+            At AllSpark Technologies, we believe in the power of innovation to transform ideas into impactful digital products. As a top software development company based in the USA, we specialize in custom software development services, tailored to meet modern business needs.
             </span>
             <span className="mt-5 block">
-              Driven by passion and expertise, our team of skilled developers, engineers, and AI specialists work collaboratively to create intelligent, user-centric solutions that shape the future of technology.
+              Our team of experienced developers, engineers, and AI specialists work collaboratively to deliver enterprise software development solutions that are intelligent, scalable, and user-centric.
+
             </span>
           </p>
+
+
+
+
+
+
 
           <div className="flex flex-wrap lg:flex-nowrap space-x-6 mt-10 gap-6 lg:gap-0 justify-center lg:justify-between">
             <div className="flex items-center space-x-3 bg-[#5666ff] lg:w-1/3 p-2 rounded-lg">
@@ -158,5 +156,4 @@ export default function AboutSection() {
     </section>
   );
 }
-
 

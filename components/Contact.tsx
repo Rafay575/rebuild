@@ -41,7 +41,7 @@ export default function Contact() {
     </div>
     <div>
       <h3 className="text-lg font-semibold">Call Us</h3>
-      <p className="text-sm">+1 (762) 777-7275</p>
+      <p className="text-sm">+1(616)308-1863</p>
     </div>
   </motion.a>
 

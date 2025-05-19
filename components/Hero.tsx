@@ -11,19 +11,18 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export default function HeroSection() {
   const texts = [
-    "Empowering Businesses With Al & Latest Technology",
-    "Unleashing Creative Solutions & Innovation",
-    "Driving Growth Through Modernization & Automation",
+    "Trusted Software Development Company",
+    "AI Solutions That Drive Innovation",
+ 
   ];
 
 
   const features = [
-    "Innovation First",
-    "Scalability & Security",
-    "Continuous Improvement",
-    "Client-Centric Approach",
-    "Data-Driven Decisions",
-    "Collaboration & Transparency",
+    "Data-Driven Software Development",
+    "Collaboration & Transparency from a Trusted Software Development Company",
+    "Leading AI Development Company",
+    "Scalability & Security Built-In",
+   
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
