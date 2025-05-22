@@ -153,6 +153,7 @@ export default function TestimonialsSection() {
                     width={48}
                     height={48}
                     className="mr-4 h-12 w-12 rounded-full object-cover"
+                    unoptimized
                   />
                   <div className="flex flex-col items-start">
                     <h3 className="font-semibold ml-0">{t.name}</h3>

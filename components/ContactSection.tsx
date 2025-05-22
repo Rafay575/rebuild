@@ -19,6 +19,7 @@ export default function ContactSection() {
               width={250}
               height={250}
               className="mb-4 md:mb-0 md:mr-6"
+              unoptimized
             />
 
             <div className="text-center md:text-left">

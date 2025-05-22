@@ -24,9 +24,7 @@ export default function ServiceCards() {
             </h5>
             {/* Description */}
             <p className="mb-4 text-sm text-gray-600 leading-relaxed">
-              Our team of highly skilled professionals brings deep industry
-              knowledge and expertise to provide customized solutions, ensuring
-              top-quality results tailored to your business’s unique needs.
+              Our trusted software development team includes experienced software developers in the USA who bring deep industry knowledge and innovation. As a client-focused software development team, we tailor each solution to your business’s unique needs for measurable results.
             </p>
             {/* Button */}
           </div>
@@ -48,9 +46,8 @@ export default function ServiceCards() {
             </h5>
             {/* Description */}
             <p className="mb-4 text-sm text-gray-600 leading-relaxed">
-              We prioritize customer satisfaction with our round-the-clock
-              support team. Available 24/7, we’re ready to resolve any issues,
-              answer questions, and ensure a seamless experience.
+           As a full-service technology partner, we offer 24/7 customer support to ensure your operations run smoothly. Our client-centric approach makes us a leading digital solutions provider in the USA, committed to seamless, ongoing assistance.
+
             </p>
             {/* Button */}
           </div>
@@ -72,9 +69,7 @@ export default function ServiceCards() {
             </h5>
             {/* Description */}
             <p className="mb-4 text-sm text-gray-600 leading-relaxed">
-              We offer competitive pricing designed to fit any budget, without
-              compromising on quality. Our pricing ensures maximum value, making
-              sure you receive the best deal possible.
+            We combine premium quality with competitive pricing. As a US-based software development company, we deliver top-tier results that align with your goals and budget—making us a value-driven, custom software solutions provider.
             </p>
             {/* Button */}
           </div>

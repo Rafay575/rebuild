@@ -12,16 +12,17 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 export default function HeroSection() {
   const texts = [
     "Trusted Software Development Company",
-    "AI Solutions That Drive Innovation",
- 
+    "AI Solutions That Drive Innovation and Growth",
+    "Full-Stack Development & SaaS Expertise"
   ];
 
-
   const features = [
-    "Data-Driven Software Development",
-    "Collaboration & Transparency from a Trusted Software Development Company",
-    "Leading AI Development Company",
-    "Scalability & Security Built-In",
+    "Custom Software Solutions",
+    "Transparent Collaboration",
+    "Scalable AI Tools",
+    "Enterprise-Grade Security",
+    "End-to-End Delivery",
+    "Agile Software Teams",
    
   ];
 

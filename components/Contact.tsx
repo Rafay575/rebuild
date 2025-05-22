@@ -23,7 +23,12 @@ export default function Contact() {
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
               Ready to Get Started
             </h2>
+          <div>
+            <p className="text-sm leading-6">
 
+            Looking to bring your digital vision to life? Contact AllSpark Technologies today to discuss your project. Whether you&apos;re looking to speak to an AI development expert, schedule a consultation with a software expert, or request a quote for custom software development, we&apos;re here to help. As a leading software development agency in the USA, we offer seamless support for all your tech needs.
+            </p>
+          </div>
           <div className="py-12 pb-20 space-y-6">
   {/* Call Us */}
   <motion.a

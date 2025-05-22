@@ -15,6 +15,7 @@ export default function AboutSection() {
               width={400}
               height={400}
               className="rounded-3xl w-full h-auto"
+              unoptimized
             />
           </div>
 
@@ -26,6 +27,7 @@ export default function AboutSection() {
               fill
               sizes="100px"
               className="object-contain"
+              unoptimized
             />
           </div>
 
@@ -43,6 +45,7 @@ export default function AboutSection() {
               fill
               sizes="80px"
               className="object-contain"
+              unoptimized
             />
           </div>
         </div>
