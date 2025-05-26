@@ -20,7 +20,7 @@ export default function AboutSection() {
           </div>
 
           {/* ───────── bottom-right overlay ───────── */}
-          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[200px] h-[200px]">
+          <div className="absolute bottom-[-30px] right-[-30px] sm:bottom-[-35px] sm:right-[-40px] w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
             <Image
               src="/images/aboutThumb1_1-sub-section.png"
               alt="Team Discussion"
@@ -33,7 +33,7 @@ export default function AboutSection() {
 
           {/* ───────── spinning shape ───────── */}
           <div
-            className="absolute top-0 right-0 w-[5em] h-[5em] md:right-[-10px] md:w-16 md:h-16
+            className="absolute top-0 right-[0px] w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16 md:right-[-10px] md:w-16 md:h-16
                lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-20 xl:h-20 flex
                items-center justify-center rounded-full border-2 border-white
                text-white text-xs uppercase tracking-wide animate-spin"
