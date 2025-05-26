@@ -11,7 +11,7 @@ const contactpage = () => {
       <Navbar2 />
       <HeroSection
         title="Contact Us"
-        backgroundImage="/images/breadcrum.webp"
+        backgroundImage="breadcrum.webp"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" },

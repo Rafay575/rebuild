@@ -1,6 +1,5 @@
-// components/HeroSection.tsx
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface BreadcrumbItem {
   label: string;
@@ -8,38 +7,46 @@ interface BreadcrumbItem {
 }
 
 interface HeroSectionProps {
-  /** The main heading text, e.g. "Contact Us" */
   title: string;
-  /** URL or path to the background image, e.g. "/images/contact-bg.jpg" */
   backgroundImage: string;
-  /** Array of breadcrumb items to display, e.g. [{ label: "Home", href: "/" }, { label: "Contact Us", href: "/contact" }] */
   breadcrumbs?: BreadcrumbItem[];
-  /** Optional overlay color (Tailwind class) */
   overlayColor?: string;
-  /** Optional height of the hero section (Tailwind class) */
   heightClass?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   backgroundImage,
-
-  overlayColor = 'bg-blue-900/50', // Semi-transparent overlay by default
-  heightClass = 'h-96', // Default height
+  overlayColor = 'bg-blue-900/50',
+  heightClass = 'h-96',
 }) => {
-  return (
-    <section className={`relative w-full ${heightClass} bg-cover bg-center`} 
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
-    >
-      {/* Overlay */}
-      <div className={`absolute inset-0 ${overlayColor}`} />
+  const [isMobile, setIsMobile] = useState(false);
 
-      {/* Content */}
+  useEffect(() => {
+    // Check screen width
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile(); // Initial check
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const imagePath = isMobile
+    ? `/images/service/mobile/${backgroundImage}`
+    : `/images/service/${backgroundImage}`;
+
+  return (
+    <section
+      className={`relative w-full ${heightClass} bg-cover bg-center`}
+      style={{ backgroundImage: `url('${imagePath}')` }}
+    >
+      <div className={`absolute inset-0 ${overlayColor}`} />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
         <h1 className="mb-4 text-3xl font-bold md:text-5xl">{title}</h1>
-
-        {/* Breadcrumbs */}
-       
+        {/* Breadcrumbs can be added here */}
       </div>
     </section>
   );

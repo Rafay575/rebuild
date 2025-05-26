@@ -1,20 +1,15 @@
 "use client";
-import Script from 'next/script'
+import Script from 'next/script';
 import GlobalPreloader from "@/components/GlobalPreloader";
 
 import "./globals.css";
-import { Plus_Jakarta_Sans } from "next/font/google"; // Import the font
-// import NProgress from "nprogress";
-// Load NProgress styles if necessary
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "@/styles/nprogress.css";
-
-// Load Plus Jakarta Sans Font
+import { Toaster } from 'sonner';
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Choose the weights you need
+  weight: ["300", "400", "500", "600", "700"],
 });
- 
-
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -37,21 +32,34 @@ const jsonLd = {
         addressCountry: 'US',
       },
     },
-    /* …the rest of your graph… */
   ],
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
       <head>
-        {/* Inject the JSON-LD into the head */}
+        {/* Page title in tab */}
+        <title>Custom Software Development Company & AI Solutions | AllSpark Technologies</title>
+
+        {/* Meta tags */}
+        <meta name="description" content="AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="AllSpark Technologies" />
+        <meta property="og:title" content="AllSpark Technologies | Software & AI Solutions" />
+        <meta property="og:description" content="AllSpark Technologies builds scalable software and AI solutions, mobile apps, and tech-enabled services in the USA." />
+        <meta property="og:url" content="https://allsparktechnologies.com" />
+        <meta property="og:image" content="https://allsparktechnologies.com/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+
+        {/* JSON-LD Schema */}
         <Script
           id="json-ld-schema"
           type="application/ld+json"
@@ -59,14 +67,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-       <link
-        rel="icon"
-        href="/images/favicon.png"
-        type="image/png"
-      />
       <body className={`${plusJakartaSans.className} antialiased`}>
         <GlobalPreloader />
         {children}
+        <Toaster position="bottom-right" className='bg-[#384BFF] text-white' />
       </body>
     </html>
   );

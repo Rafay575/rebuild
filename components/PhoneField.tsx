@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -8,58 +8,48 @@ interface PhoneFieldProps {
   label?: string;
   name?: string;
   placeholder?: string;
-  // You can add more props if needed
+  value: string;                     // RHF controlled value
+  onChange: (value: string) => void; // RHF controlled onChange
+  onBlur?: () => void;              // RHF onBlur
+  error?: string;                   // optional error message
 }
 
 export default function PhoneField({
   label = "Phone Number*",
   name = "phone",
   placeholder = "Enter your phone number",
+  value,
+  onChange,
+  onBlur,
+  error,
 }: PhoneFieldProps) {
-  const [phoneValue, setPhoneValue] = useState("");
-
   return (
     <div className="flex flex-col gap-1 w-full">
       {label && (
-        <label
-          htmlFor={name}
-          className="block text-sm font-medium text-gray-700"
-        >
+        <label htmlFor={name} className="block text-sm font-medium text-gray-700">
           {label}
         </label>
       )}
 
       <PhoneInput
-        country={"us"}
-        value={phoneValue}
-        onChange={(phone) => setPhoneValue(phone)}
+        country="us"
+        value={value}
+        onChange={(phone) => onChange(phone)}
+        onBlur={onBlur}
         inputProps={{
           name: name,
           id: name,
-          required: true,
+       
         }}
         placeholder={placeholder}
-        enableSearch={true} // Show a search bar in the dropdown
-        containerStyle={{
-          width: "100%",
-        }}
-        inputStyle={{
-          width: "100%",
-          height: "2.5rem",
-          fontSize: "1rem",
-          paddingLeft: "3rem", // extra left space for flags + dial code
-          borderRadius: "0.375rem",
-          border: "1px solid #d1d5db", // gray-300
-        }}
-        buttonStyle={{
-          borderTopLeftRadius: "0.375rem",
-          borderBottomLeftRadius: "0.375rem",
-          border: "1px solid #d1d5db",
-        }}
-        dropdownStyle={{
-          borderRadius: "0.375rem",
-        }}
+        enableSearch
+        containerClass="w-full"
+        inputClass="w-full h-10 text-base px-3 rounded-md border border-gray-300"
+        buttonClass="border border-gray-300 rounded-l-md"
+        dropdownClass="rounded-md"
       />
+
+      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </div>
   );
 }

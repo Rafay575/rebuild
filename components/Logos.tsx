@@ -23,7 +23,8 @@ export default function Logos() {
               width={150}
               height={50}
               className="object-contain"
-              priority
+
+              unoptimized
             />
           </div>
         ))}

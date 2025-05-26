@@ -10,7 +10,7 @@ const Services = () => {
     <div>
       <Topnav />
       <Navbar2 />
-      <ClientOnlyServicesTabs /> {/* Use the client-only wrapper */}
+      <ClientOnlyServicesTabs /> 
       <Footer2 />
       {/* <BottomFooter /> */}
     </div>

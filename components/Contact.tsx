@@ -1,14 +1,68 @@
 "use client";
 
 import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import PhoneField from "./PhoneField";
 import Dropdown from "./Dropdown";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
+import { useForm, Controller } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {  toast } from "sonner"; // Sonner for toasts
+// Sonner styles
+
+// Define your form schema using Zod
+const contactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(1, "Phone is required"),
+  service: z.string().min(1, "Service is required"),
+  message: z.string().min(1, "Message is required"),
+});
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 export default function Contact() {
+  const {
+    register,
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values: ContactFormValues) {
+    try {
+      const res = await fetch("http://localhost:4000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success(data.message || "Request received");
+        reset();
+      } else {
+        toast.error(data.error || "Something went wrong");
+      }
+    } catch (err) {
+      toast.error("Network error");
+    }
+  }
+
   return (
     <>
+      {/* Toast container */}
+     
       <motion.section
         className="max-w-7xl mx-auto px-4 my-8 py-8"
         initial={{ opacity: 0, y: 100 }}
@@ -23,83 +77,87 @@ export default function Contact() {
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
               Ready to Get Started
             </h2>
-          <div>
-            <p className="text-sm leading-6">
+            <div>
+              <p className="text-sm leading-6">
+                Looking to bring your digital vision to life? Contact AllSpark
+                Technologies today to discuss your project. Whether you&apos;re
+                looking to speak to an AI development expert, schedule a
+                consultation with a software expert, or request a quote for
+                custom software development, we&apos;re here to help. As a
+                leading software development agency in the USA, we offer
+                seamless support for all your tech needs.
+              </p>
+            </div>
+            <div className="py-12 pb-20 space-y-6">
+              {/* Call Us */}
+              <motion.a
+                href="tel:+17627777275"
+                className="flex items-center relative group transition-all"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <Phone
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Call Us</h3>
+                  <p className="text-sm">+1(616)308-1863</p>
+                </div>
+              </motion.a>
 
-            Looking to bring your digital vision to life? Contact AllSpark Technologies today to discuss your project. Whether you&apos;re looking to speak to an AI development expert, schedule a consultation with a software expert, or request a quote for custom software development, we&apos;re here to help. As a leading software development agency in the USA, we offer seamless support for all your tech needs.
-            </p>
-          </div>
-          <div className="py-12 pb-20 space-y-6">
-  {/* Call Us */}
-  <motion.a
-    href="tel:+17627777275"
-    className="flex items-center relative group transition-all"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
-  >
-    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-      <Phone
-        className="text-[#384BFF] group-hover:text-white transition-all"
-        size={22}
-      />
-      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-    </div>
-    <div>
-      <h3 className="text-lg font-semibold">Call Us</h3>
-      <p className="text-sm">+1(616)308-1863</p>
-    </div>
-  </motion.a>
+              {/* Get a Quote */}
+              <motion.a
+                href="mailto:info@allsparktechnologies.com"
+                className="flex items-center relative group transition-all"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <Mail
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Get a Quote</h3>
+                  <p className="text-sm">info@allsparktechnologies.com</p>
+                </div>
+              </motion.a>
 
-  {/* Get a Quote */}
-  <motion.a
-    href="mailto:info@allsparktechnologies.com"
-    className="flex items-center relative group transition-all"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
-  >
-    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-      <Mail
-        className="text-[#384BFF] group-hover:text-white transition-all"
-        size={22}
-      />
-      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-    </div>
-    <div>
-      <h3 className="text-lg font-semibold">Get a Quote</h3>
-      <p className="text-sm">info@allsparktechnologies.com</p>
-    </div>
-  </motion.a>
-
-  {/* Location */}
-  <motion.a
-    href="https://www.google.com/maps/search/?api=1&query=638+Knollwood+Road,+Franklin+Lakes+NJ+07417"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center relative group transition-all"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
-  >
-    <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
-      <MapPin
-        className="text-[#384BFF] group-hover:text-white transition-all"
-        size={22}
-      />
-      <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
-    </div>
-    <div>
-      <h3 className="text-lg font-semibold">Location</h3>
-      <p className="text-sm">
-        638 Knollwood Road, Franklin Lakes NJ 07417
-      </p>
-    </div>
-  </motion.a>
-</div>
-
+              {/* Location */}
+              <motion.a
+                href="https://www.google.com/maps/search/?api=1&query=638+Knollwood+Road,+Franklin+Lakes+NJ+07417"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center relative group transition-all"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="mr-3 flex h-14 w-14 items-center justify-center rounded-full border-dotted border-2 border-[#384BFF] relative overflow-hidden group-hover:bg-[#384BFF] transition-all">
+                  <MapPin
+                    className="text-[#384BFF] group-hover:text-white transition-all"
+                    size={22}
+                  />
+                  <div className="absolute right-0 h-full bg-[#384BFF] opacity-0 group-hover:opacity-100 transition-all w-0" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Location</h3>
+                  <p className="text-sm">
+                    638 Knollwood Road, Franklin Lakes NJ 07417
+                  </p>
+                </div>
+              </motion.a>
+            </div>
           </div>
 
           {/* Right Column: Contact Form */}
           <div>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
                   <label
@@ -111,11 +169,17 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    {...register("name")}
                     placeholder="Your name"
                     className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
+
                 <div>
                   <label
                     htmlFor="email"
@@ -126,63 +190,97 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    {...register("email")}
                     placeholder="info@allsparktechnologies.com"
                     className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
               </div>
 
-              {/* Row 2: Phone, Message */}
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
-
-                <div className="col-span-1 ">
-                  <PhoneField
-                    label="Your Phone*"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Controller
                     name="phone"
-                    placeholder="+1 234 567 890"
+                    control={control}
+                    render={({ field }) => (
+                      <PhoneField
+                        {...field}
+                        label="Your Phone*"
+                        placeholder="+1 234 567 890"
+                      />
+                    )}
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.phone.message}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <Controller
+                    name="service"
+                    control={control}
+                    render={({ field, fieldState }) => (
+                      <Dropdown
+                        label="Choose a service"
+                        items={[
+                          "Customer Support",
+                          "Digital Marketing & SEO",
+                          "Custom Software Development",
+                          "Web & App Development",
+                          "AI & Machine Learning",
+                          "Cloud & DevOps Solutions",
+                          "UI/UX Design",
+                          "Ecommerce Development",
+                          "Email Marketing",
+                          "Live Chat Support",
+                        ]}
+                        value={field.value}
+                        onChange={field.onChange}
+                        onBlur={field.onBlur}
+                        error={fieldState.error?.message}
+                      />
+                    )}
                   />
                 </div>
-                <div className="col-span-1 ">
-                  <Dropdown
-                    label="Choose a service"
-                    items={[
-                      "Customer Support",
-                      "Digital Marketing & SEO",
-                      "Custom Software Development",
-                      "Web & App Development",
-                      "AI & Machine Learning",
-                      "Cloud & DevOps Solutions",
-                      "UI/UX Design",
-                      "Ecommerce Development",
-                      "Email Marketing",
-                      "Live Chat Support",
-                    ]}
-                  />
-                </div>
-                <div className="col-span-1 md:col-span-2">
+
+                <div className="md:col-span-2">
                   <label
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Describe your project
+                    Describe your project*
                   </label>
                   <textarea
-                    rows={8}
                     id="message"
-                    name="message"
+                    rows={6}
+                    {...register("message")}
                     placeholder="Describe your project"
                     className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
-                className="rounded-full bg-[#384BFF] px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#384BFF] focus:ring-offset-2"
+                disabled={isSubmitting}
+                className="flex items-center justify-center rounded-full bg-[#384BFF] px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#384BFF] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting && (
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                )}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -207,6 +305,145 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </motion.div>
+      {/* <motion.section
+        className="max-w-7xl mx-auto px-4 my-8 py-8"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+       
+          <div>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900">Ready to Get Started</h2>
+            <p className="text-sm leading-6">
+              Looking to bring your digital vision to life? Contact AllSpark Technologies today
+              to discuss your project...
+            </p>
+            <div className="py-12 pb-20 space-y-6">
+              <div className="flex items-center space-x-4">
+                <Phone className="w-6 h-6 text-gray-500" />
+                <p className="text-sm text-gray-500">+1 (123) 456-7890</p>
+            </div>
+          </div>
+
+       
+          <div>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+           
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                    Your Name*
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    {...register("name")}
+                    placeholder="Your name"
+                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    Your Email*
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    {...register("email")}
+                    placeholder="info@allsparktechnologies.com"
+                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                  )}
+                </div>
+              </div>
+
+            
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Controller
+                    name="phone"
+                    control={control}
+                    render={({ field }) => (
+                      <PhoneField
+                        {...field}
+                        label="Your Phone*"
+                        placeholder="+1 234 567 890"
+                      />
+                    )}
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+                  )}
+                </div>
+
+                <div>
+                 <Controller
+  name="service"
+  control={control}
+  render={({ field, fieldState }) => (
+    <Dropdown
+      label="Choose a service"
+      items={[
+        "Customer Support",
+        "Digital Marketing & SEO",
+        "Custom Software Development",
+        "Web & App Development",
+        "AI & Machine Learning",
+        "Cloud & DevOps Solutions",
+        "UI/UX Design",
+        "Ecommerce Development",
+        "Email Marketing",
+        "Live Chat Support",
+      ]}
+      value={field.value}
+      onChange={field.onChange}
+      onBlur={field.onBlur}
+      error={fieldState.error?.message}
+    />
+  )}
+/>
+
+                </div>
+
+                <div className="md:col-span-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                    Describe your project*
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={6}
+                    {...register("message")}
+                    placeholder="Describe your project"
+                    className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                  )}
+                </div>
+              </div>
+
+             
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex items-center justify-center rounded-full bg-[#384BFF] px-6 py-2 text-white shadow-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-[#384BFF] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          </div>
+        </div>
+        </div>
+      </motion.section> */}
     </>
   );
 }
