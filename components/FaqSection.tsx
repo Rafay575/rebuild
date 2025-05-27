@@ -45,6 +45,7 @@ export default function FaqSection() {
                lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-20 xl:h-20 flex
                items-center justify-center rounded-full border-2 border-white
                text-white text-xs uppercase tracking-wide animate-spin"
+               
             style={{ animationDuration: "4s" }}
           >
             <Image
