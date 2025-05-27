@@ -1,39 +1,37 @@
-"use client";
+// app/about/page.tsx
+import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
-import React, { Suspense } from "react";
-import Topnav from "@/components/Topnav";
-import Navbar2 from "@/components/Navbar2";
-import HeroSection from "@/components/HeroSection";
-import Footer2 from "@/components/Footer2";
-import ServiceCards from "@/components/ServiceCards";
-import AboutPageComponent from "@/components/AboutPageComponent";  // Ensure this component is CSR-safe
-import CoreValuesSemiCircle from "@/components/CoreValuesSemiCircle";
+// Dynamically import the client component
+const AboutClient = dynamic(() => import('@/components/AboutClient'), { ssr: false });
 
-
-const about = () => {
-  return (
-    <div>
-      <Topnav />
-      <Navbar2 />
-      <HeroSection
-        title="About Us"
-        backgroundImage="breadcrum.webp"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About Us", href: "/About" },
-        ]}
-      />
-      <ServiceCards />
-      
-      {/* Wrap AboutPageComponent in Suspense if it uses async hooks */}
-      <Suspense fallback={<div>Loading About Page...</div>}>
-        <AboutPageComponent />
-      </Suspense>
-
-      <CoreValuesSemiCircle />
-      <Footer2 />
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'About AllSpark Technologies | US-Based Software Development & AI Company',
+  description:
+    'Learn more about AllSpark Technologies, a trusted software development and AI company in the USA. Discover how our experienced developers deliver innovative, tech-enabled digital solutions.',
+  alternates: {
+    canonical: 'https://allsparktechnologies.com/about/',
+  },
+  openGraph: {
+    title: 'About AllSpark Technologies | US-Based Software Development Company',
+    description:
+      'Meet AllSpark Technologies — a trusted software development and AI company in the USA.',
+    url: 'https://allsparktechnologies.com/about/',
+    images: [
+      {
+        url: 'https://allsparktechnologies.com/assets/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AllSpark Technologies',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-export default about;
+export default function AboutPage() {
+  return <AboutClient />;
+}

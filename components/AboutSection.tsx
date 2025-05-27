@@ -5,8 +5,7 @@ export default function AboutSection() {
   return (
     <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
-      
-<div className="relative w-full max-w-md">
+        <div className="relative w-full max-w-md">
           {/* ───────── main photo ───────── */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
@@ -33,8 +32,8 @@ export default function AboutSection() {
 
           {/* ───────── spinning shape ───────── */}
           <div
-            className="absolute top-0 right-[0px] w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16 md:right-[-10px] md:w-16 md:h-16
-               lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-20 xl:h-20 flex
+            className="absolute top-0 right-[0px] [@media(max-width:374px)]:w-12 [@media(max-width:374px)]:h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16 md:right-[-10px] md:w-16 md:h-16
+               lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-24 xl:h-24 flex
                items-center justify-center rounded-full border-2 border-white
                text-white text-xs uppercase tracking-wide animate-spin"
             style={{ animationDuration: "4s" }}
@@ -49,8 +48,6 @@ export default function AboutSection() {
             />
           </div>
         </div>
-
-
         <div className="w-full max-w-lg mx-auto lg:text-left">
           <div className="mb-2 flex items-center space-x-4 text-sm font-semibold uppercase tracking-wide text-white">
             <ArrowLeft className="h-4 w-4" />
@@ -70,13 +67,6 @@ export default function AboutSection() {
 
             </span>
           </p>
-
-
-
-
-
-
-
           <div className="flex flex-wrap lg:flex-nowrap space-x-6 mt-10 gap-6 lg:gap-0 justify-center lg:justify-between">
             <div className="flex items-center space-x-3 bg-[#5666ff] lg:w-1/3 p-2 rounded-lg">
               <div className="bg-white p-3 rounded-lg flex items-center justify-center">
@@ -159,4 +149,6 @@ export default function AboutSection() {
     </section>
   );
 }
+
+
 
