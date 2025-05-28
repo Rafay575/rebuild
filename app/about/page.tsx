@@ -1,9 +1,8 @@
 // app/about/page.tsx
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 
 // Dynamically import the client component
-const AboutClient = dynamic(() => import('@/components/AboutClient'), { ssr: false });
+import AboutClient from '@/components/AboutClient'
 
 export const metadata: Metadata = {
   title: 'About AllSpark Technologies | US-Based Software Development & AI Company',

@@ -56,6 +56,7 @@ export default function Contact() {
       }
     } catch (err) {
       toast.error("Network error");
+      console.log(err);
     }
   }
 
