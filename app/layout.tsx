@@ -1,6 +1,6 @@
 
-import Script from 'next/script';
 import GlobalPreloader from "@/components/GlobalPreloader";
+import Script from "next/script";
 
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -11,30 +11,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://allsparktechnologies.com/#organization',
-      name: 'AllSpark Technologies',
-      url: 'https://allsparktechnologies.com',
-      logo: 'https://allsparktechnologies.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/allspark-technologies',
-        'https://www.facebook.com/allsparktechnologies',
-      ],
-      description:
-        'AllSpark Technologies is a leading software development company and AI development agency in the USA, offering custom software, cloud, DevOps, and full-stack solutions.',
-      foundingDate: '2023',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US',
-      },
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,31 +19,59 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Page title in tab */}
-        <title>Custom Software Development Company & AI Solutions | AllSpark Technologies</title>
-
-        {/* Meta tags */}
-        <meta name="description" content="AllSpark Technologies builds scalable software development solutions, AI solutions, mobile apps, cloud systems, and offers tech-enabled services in USA." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="AllSpark Technologies" />
-        <meta property="og:title" content="AllSpark Technologies | Software & AI Solutions" />
-        <meta property="og:description" content="AllSpark Technologies builds scalable software and AI solutions, mobile apps, and tech-enabled services in the USA." />
-        <meta property="og:url" content="https://allsparktechnologies.com" />
-        <meta property="og:image" content="https://allsparktechnologies.com/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-
-        {/* Favicon */}
+      
         <link rel="icon" href="/images/favicon.png" type="image/png" />
-
+        <meta name="google-site-verification" content="G1uaovu8fDlyB3-5phzFHMeTubsdrU5pyZmKLe4l7FA" />
         {/* JSON-LD Schema */}
-        <Script
-          id="json-ld-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7PCVCQV0ZX"
           strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7PCVCQV0ZX');
+          `}
+        </Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "rppd5k13y0");
+          `}
+        </Script>
+
+        {/* Google Tag Manager */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T96MJWT5');
+          `}
+        </Script>
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T96MJWT5"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <GlobalPreloader />
         {children}
         <Toaster position="bottom-right" className='bg-[#384BFF] text-white' />
