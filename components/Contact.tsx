@@ -56,14 +56,12 @@ export default function Contact() {
       }
     } catch (err) {
       toast.error("Network error");
-      console.log(err);
+      console.log(err)
     }
   }
 
   return (
     <>
-      {/* Toast container */}
-     
       <motion.section
         className="max-w-7xl mx-auto px-4 my-8 py-8"
         initial={{ opacity: 0, y: 100 }}
