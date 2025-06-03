@@ -1,9 +1,9 @@
 // app/about/page.tsx
 import { Metadata } from "next";
+import Script from "next/script";
 
 // Dynamically import the client component
 import AboutClient from "@/components/AboutClient";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: 'About AllSpark Technologies | US-Based Software Development & AI Company',
@@ -47,6 +47,7 @@ export default function AboutPage() {
     <>
       <AboutClient />{" "}
       <Script
+      id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -64,6 +64,7 @@ const contactpage = () => {
       <Contact />
       <Footer2 />
       <Script
+      id="ldjson"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

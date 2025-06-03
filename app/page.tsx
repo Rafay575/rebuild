@@ -8,7 +8,6 @@ import FaqSection from "@/components/FaqSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata = {
@@ -56,6 +55,7 @@ export default function Home() {
       <TestimonialsSection />
       <Footer />
       <Script
+      id="ld-json"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
