@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section className="relative bg-blue-600 overflow-x-hidden py-28 text-white">
       <div className="mx-auto max-w-7xl flex flex-col-reverse justify-between gap-10 px-3 lg:px-6 lg:flex-row">
-        <div className="relative w-full max-w-md">
+        <div className="relative w-full mx-auto lg:mx-0  max-w-md">
           {/* ───────── main photo ───────── */}
           <div className="relative overflow-hidden rounded-3xl w-full h-auto">
             <Image
@@ -32,7 +32,7 @@ export default function AboutSection() {
 
           {/* ───────── spinning shape ───────── */}
           <div
-            className="absolute top-0 right-0 [@media(max-width:374px)]:w-12 [@media(max-width:374px)]:h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16 [@media(min-width:768px)]:right-[-10px] [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:right-[-10px] [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:right-0 [@media(min-width:1280px)]:w-24  [@media(min-width:1280px)]:h-24  flex
+            className="absolute top-0 right-0 w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16  [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:!w-[80px]  [@media(min-width:1280px)]:!h-[80px]  flex
                items-center justify-center rounded-full border-2 border-white
                text-white text-xs uppercase tracking-wide animate-spin"
             style={{ animationDuration: "4s" }}
@@ -41,8 +41,8 @@ export default function AboutSection() {
               src="/images/aboutShape2.png"
               alt="Explore More"
               fill
-              sizes="80px"
-              className="object-contain"
+              // sizes="80px"
+              className="object-cover"
               unoptimized
             />
           </div>

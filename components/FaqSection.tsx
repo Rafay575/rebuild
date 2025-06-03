@@ -41,10 +41,7 @@ export default function FaqSection() {
 
           {/* ───────── spinning shape ───────── */}
           <div
-            className="absolute top-0 right-0 [@media(max-width:374px)]:w-12 [@media(max-width:374px)]:h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16 md:w-16 md:h-16
-               lg:right-[-10px] lg:w-20 lg:h-20 xl:right-0 xl:w-24 xl:h-24 flex
-               items-center justify-center rounded-full border-2 border-white
-               text-white text-xs uppercase tracking-wide animate-spin"
+             className="absolute top-0 right-0 w-12 h-12 [@media(min-width:375px)]:w-14 [@media(min-width:375px)]:h-14 [@media(min-width:425px)]:w-16 [@media(min-width:425px)]:h-16  [@media(min-width:768px)]:w-16 [@media(min-width:768px)]:h-16 [@media(min-width:1024px)]:w-20 [@media(min-width:1024px)]:h-20 [@media(min-width:1280px)]:!w-[80px]  [@media(min-width:1280px)]:!h-[80px]  flex items-center justify-center rounded-full border-2 border-white text-white text-xs uppercase tracking-wide animate-spin"
 
             style={{ animationDuration: "4s" }}
           >

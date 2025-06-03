@@ -1,26 +1,8 @@
 {
-  "components\\ClientOnlyServicesTabs.tsx -> @/components/ServicesTabs": {
-    "id": 9630,
+  "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\internal\\helpers\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\internal\\helpers\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
     "files": [
-      "static/chunks/249.7d1936045a38aad3.js"
-    ]
-  },
-  "components\\WhyChooseAST.tsx -> react-countup": {
-    "id": 9030,
-    "files": [
-      "static/chunks/30.d218a7e4b83571c9.js"
-    ]
-  },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 5203,
-    "files": [
-      "static/chunks/203.2b4c1ee4fbe3a7cf.js"
-    ]
-  },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 6218,
-    "files": [
-      "static/chunks/218.57a830a2c55ba802.js"
+      "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
     ]
   }
 }
