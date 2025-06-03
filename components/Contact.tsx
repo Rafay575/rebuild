@@ -9,9 +9,7 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {  toast } from "sonner"; // Sonner for toasts
-// Sonner styles
 
-// Define your form schema using Zod
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),

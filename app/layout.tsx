@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      
+      <title>AllSpark Technologies</title>
         <link rel="icon" href="/images/favicon.png" type="image/png" />
         <meta name="google-site-verification" content="G1uaovu8fDlyB3-5phzFHMeTubsdrU5pyZmKLe4l7FA" />
         {/* JSON-LD Schema */}
